@@ -1,0 +1,392 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27A3E7C11BF637DD004C7EFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3E7C01BF637DD004C7EFB /* AppDelegate.swift */; };
+		27A3E7C31BF637DD004C7EFB /* ShowsViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3E7C21BF637DD004C7EFB /* ShowsViewContoller.swift */; };
+		27A3E7C61BF637DD004C7EFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A3E7C41BF637DD004C7EFB /* Main.storyboard */; };
+		27A3E7C91BF637DD004C7EFB /* Powwow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27A3E7C71BF637DD004C7EFB /* Powwow.xcdatamodeld */; };
+		27A3E7CB1BF637DD004C7EFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A3E7CA1BF637DD004C7EFB /* Assets.xcassets */; };
+		27A3E7CE1BF637DD004C7EFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A3E7CC1BF637DD004C7EFB /* LaunchScreen.storyboard */; };
+		27A3E7D61BF63B4B004C7EFB /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3E7D51BF63B4B004C7EFB /* Show.swift */; };
+		B5536F530D49891343727A64 /* Pods_Powwow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04745B937B6723A188185CB /* Pods_Powwow.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27A3E7BD1BF637DC004C7EFB /* Powwow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Powwow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A3E7C01BF637DD004C7EFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27A3E7C21BF637DD004C7EFB /* ShowsViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsViewContoller.swift; sourceTree = "<group>"; };
+		27A3E7C51BF637DD004C7EFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27A3E7C81BF637DD004C7EFB /* Powwow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Powwow.xcdatamodel; sourceTree = "<group>"; };
+		27A3E7CA1BF637DD004C7EFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27A3E7CD1BF637DD004C7EFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27A3E7CF1BF637DD004C7EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A3E7D51BF63B4B004C7EFB /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		3C248A2F8275789BCBBC9E8D /* Pods-Powwow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Powwow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Powwow/Pods-Powwow.release.xcconfig"; sourceTree = "<group>"; };
+		7F050E277D8434D6007EBF46 /* Pods-Powwow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Powwow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Powwow/Pods-Powwow.debug.xcconfig"; sourceTree = "<group>"; };
+		C04745B937B6723A188185CB /* Pods_Powwow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Powwow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27A3E7BA1BF637DC004C7EFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5536F530D49891343727A64 /* Pods_Powwow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27A3E7B41BF637DC004C7EFB = {
+			isa = PBXGroup;
+			children = (
+				27A3E7BF1BF637DC004C7EFB /* Powwow */,
+				27A3E7BE1BF637DC004C7EFB /* Products */,
+				FE430B0DA7E848D75C1CE6AC /* Pods */,
+				F16016766E3214178B28F381 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		27A3E7BE1BF637DC004C7EFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27A3E7BD1BF637DC004C7EFB /* Powwow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27A3E7BF1BF637DC004C7EFB /* Powwow */ = {
+			isa = PBXGroup;
+			children = (
+				27A3E7C01BF637DD004C7EFB /* AppDelegate.swift */,
+				27A3E7C21BF637DD004C7EFB /* ShowsViewContoller.swift */,
+				27A3E7D51BF63B4B004C7EFB /* Show.swift */,
+				27A3E7C41BF637DD004C7EFB /* Main.storyboard */,
+				27A3E7CA1BF637DD004C7EFB /* Assets.xcassets */,
+				27A3E7CC1BF637DD004C7EFB /* LaunchScreen.storyboard */,
+				27A3E7CF1BF637DD004C7EFB /* Info.plist */,
+				27A3E7C71BF637DD004C7EFB /* Powwow.xcdatamodeld */,
+			);
+			path = Powwow;
+			sourceTree = "<group>";
+		};
+		F16016766E3214178B28F381 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C04745B937B6723A188185CB /* Pods_Powwow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE430B0DA7E848D75C1CE6AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F050E277D8434D6007EBF46 /* Pods-Powwow.debug.xcconfig */,
+				3C248A2F8275789BCBBC9E8D /* Pods-Powwow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27A3E7BC1BF637DC004C7EFB /* Powwow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A3E7D21BF637DD004C7EFB /* Build configuration list for PBXNativeTarget "Powwow" */;
+			buildPhases = (
+				52BD5B19A90691ECFD1DBF04 /* Check Pods Manifest.lock */,
+				27A3E7B91BF637DC004C7EFB /* Sources */,
+				27A3E7BA1BF637DC004C7EFB /* Frameworks */,
+				27A3E7BB1BF637DC004C7EFB /* Resources */,
+				BA335479941D3F1D2255643A /* Embed Pods Frameworks */,
+				ED8394C919124C98FF2594D7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Powwow;
+			productName = Powwow;
+			productReference = 27A3E7BD1BF637DC004C7EFB /* Powwow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27A3E7B51BF637DC004C7EFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Kyle Goslan";
+				TargetAttributes = {
+					27A3E7BC1BF637DC004C7EFB = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 27A3E7B81BF637DC004C7EFB /* Build configuration list for PBXProject "Powwow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27A3E7B41BF637DC004C7EFB;
+			productRefGroup = 27A3E7BE1BF637DC004C7EFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27A3E7BC1BF637DC004C7EFB /* Powwow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27A3E7BB1BF637DC004C7EFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A3E7CE1BF637DD004C7EFB /* LaunchScreen.storyboard in Resources */,
+				27A3E7CB1BF637DD004C7EFB /* Assets.xcassets in Resources */,
+				27A3E7C61BF637DD004C7EFB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52BD5B19A90691ECFD1DBF04 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA335479941D3F1D2255643A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Powwow/Pods-Powwow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED8394C919124C98FF2594D7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Powwow/Pods-Powwow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27A3E7B91BF637DC004C7EFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A3E7C91BF637DD004C7EFB /* Powwow.xcdatamodeld in Sources */,
+				27A3E7C31BF637DD004C7EFB /* ShowsViewContoller.swift in Sources */,
+				27A3E7D61BF63B4B004C7EFB /* Show.swift in Sources */,
+				27A3E7C11BF637DD004C7EFB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		27A3E7C41BF637DD004C7EFB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27A3E7C51BF637DD004C7EFB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27A3E7CC1BF637DD004C7EFB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27A3E7CD1BF637DD004C7EFB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27A3E7D01BF637DD004C7EFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27A3E7D11BF637DD004C7EFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27A3E7D31BF637DD004C7EFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F050E277D8434D6007EBF46 /* Pods-Powwow.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Powwow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kylegoslan.Powwow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		27A3E7D41BF637DD004C7EFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C248A2F8275789BCBBC9E8D /* Pods-Powwow.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Powwow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kylegoslan.Powwow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27A3E7B81BF637DC004C7EFB /* Build configuration list for PBXProject "Powwow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A3E7D01BF637DD004C7EFB /* Debug */,
+				27A3E7D11BF637DD004C7EFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A3E7D21BF637DD004C7EFB /* Build configuration list for PBXNativeTarget "Powwow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A3E7D31BF637DD004C7EFB /* Debug */,
+				27A3E7D41BF637DD004C7EFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27A3E7C71BF637DD004C7EFB /* Powwow.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27A3E7C81BF637DD004C7EFB /* Powwow.xcdatamodel */,
+			);
+			currentVersion = 27A3E7C81BF637DD004C7EFB /* Powwow.xcdatamodel */;
+			path = Powwow.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 27A3E7B51BF637DC004C7EFB /* Project object */;
+}
