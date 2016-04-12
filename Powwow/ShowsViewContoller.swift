@@ -11,12 +11,11 @@ class ShowsViewContoller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request(.GET, "http://kylegoslan.co.uk/shows.json").response { request, response, data, error in
+        Alamofire.request(.GET, "http://kylegoslan.co.uk/powwow/programs.php").response { request, response, data, error in
             if let data = data {
                 let json = JSON(data: data)
-                
-                for show in json {
-                    let newShow = Show(data: show.1)
+                for program in json["Programs"].arrayValue {
+                    let newShow = Show(data: program)
                     self.shows.append(newShow)
                 }
                 
@@ -24,7 +23,13 @@ class ShowsViewContoller: UIViewController {
             }
         }
 
-        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowChat" {
+            let vc = segue.destinationViewController as! ChatViewController
+            vc.show = sender as! Show
+        }
     }
 
 }
@@ -51,5 +56,12 @@ extension ShowsViewContoller: UITableViewDataSource {
 
 extension ShowsViewContoller: UITableViewDelegate {
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let show = shows[indexPath.row]
+        performSegueWithIdentifier("ShowChat", sender: show)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+
     
 }

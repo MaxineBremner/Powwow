@@ -17,9 +17,9 @@ class Show {
     
     init(data: JSON) {
         
-        title = data["title"].stringValue
-        id = data ["id"].intValue
-        
+        title = data["Title"].stringValue
+        id = data ["Id"].intValue
+    
     }
     
 }
