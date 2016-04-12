@@ -7,6 +7,7 @@
 //
 
 //new comment
+//something else
 
 import Foundation
 import SwiftyJSON
