@@ -7,14 +7,26 @@ class ChatViewController: UIViewController {
     
     var messages = [Message]()
     var show: Show!
+    var timer: NSTimer?
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChat()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "updateChat", userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer!.invalidate()
+    }
     
     
     func updateChat() {
@@ -32,22 +44,22 @@ class ChatViewController: UIViewController {
         }
     }
     
+    
     @IBAction func sendMessage(sender: AnyObject) {
+        
+        guard let message = textField.text where !textField.text!.isEmpty else {
+            return
+        }
         
         let parameters = [
             "program_id": "\(show.id)",
-            "message": "some new message"
+            "message": message
         ]
-        
-        
         
         Alamofire.request(.POST, "http://kylegoslan.co.uk/powwow/new-message.php", parameters: parameters).response { request, response, data, error in
             self.updateChat()
+            self.textField.text = nil
         }
-        
-    }
-    
-    @IBAction func sendButton(sender: AnyObject) {
     }
 }
 
@@ -74,4 +86,16 @@ extension ChatViewController: UITableViewDataSource {
 extension ChatViewController: UITableViewDelegate {
     
     
+}
+
+
+extension ChatViewController: UITextFieldDelegate {
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if textField.text!.characters.count > 0 {
+            sendButton.enabled = true
+        } else {
+            sendButton.enabled = false
+        }
+        return true
+    }
 }

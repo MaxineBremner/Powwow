@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WFp-5D-BmC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WFp-5D-BmC">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -100,7 +99,7 @@
                                     <outlet property="delegate" destination="2bX-ir-bm1" id="3kf-X3-JeH"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJf-7O-sgz">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJf-7O-sgz">
                                 <rect key="frame" x="549" y="551" width="31" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="31" id="egY-bu-rQA"/>
@@ -110,14 +109,16 @@
                                     <color key="titleShadowColor" red="0.050980396568775177" green="0.0078431377187371254" blue="0.0078431377187371254" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendButton:" destination="2bX-ir-bm1" eventType="touchUpInside" id="ZZj-cl-GOT"/>
-                                    <action selector="sendMessage:" destination="2bX-ir-bm1" eventType="touchUpInside" id="pxa-NV-nuV"/>
+                                    <action selector="sendMessage:" destination="2bX-ir-bm1" eventType="touchUpInside" id="k1l-NJ-tsh"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's on your mind?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-oD-jGh">
                                 <rect key="frame" x="20" y="550" width="521" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2bX-ir-bm1" id="eqc-Fx-Xcp"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,15 +134,11 @@
                             <constraint firstAttribute="trailing" secondItem="Ht1-On-41V" secondAttribute="trailing" id="WZX-db-Sq4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Chats" id="UFj-lL-c0O">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="poO-Sd-dNs">
-                            <connections>
-                                <action selector="sendMessage:" destination="2bX-ir-bm1" id="wIx-In-7NH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Chats" id="UFj-lL-c0O"/>
                     <connections>
+                        <outlet property="sendButton" destination="xJf-7O-sgz" id="Y00-Lx-9aQ"/>
                         <outlet property="tableView" destination="Ht1-On-41V" id="yBh-W1-s0H"/>
+                        <outlet property="textField" destination="ELW-oD-jGh" id="mMG-L5-8F5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJU-Vx-yUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
