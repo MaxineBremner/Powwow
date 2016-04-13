@@ -1,6 +1,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MessageUI
 
 class ChatViewController: UIViewController {
     
@@ -13,6 +14,8 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         updateChat()
     }
+    
+    
     
     func updateChat() {
         Alamofire.request(.POST, "http://kylegoslan.co.uk/powwow/messages.php", parameters: ["program_id": "\(show.id)"]).response { request, response, data, error in
@@ -36,12 +39,16 @@ class ChatViewController: UIViewController {
             "message": "some new message"
         ]
         
+        
+        
         Alamofire.request(.POST, "http://kylegoslan.co.uk/powwow/new-message.php", parameters: parameters).response { request, response, data, error in
             self.updateChat()
         }
         
     }
     
+    @IBAction func sendButton(sender: AnyObject) {
+    }
 }
 
 
