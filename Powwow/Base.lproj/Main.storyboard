@@ -116,9 +116,6 @@
                                 <rect key="frame" x="20" y="550" width="521" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="2bX-ir-bm1" id="eqc-Fx-Xcp"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -138,7 +135,7 @@
                     <connections>
                         <outlet property="sendButton" destination="xJf-7O-sgz" id="Y00-Lx-9aQ"/>
                         <outlet property="tableView" destination="Ht1-On-41V" id="yBh-W1-s0H"/>
-                        <outlet property="textField" destination="ELW-oD-jGh" id="mMG-L5-8F5"/>
+                        <outlet property="textField" destination="ELW-oD-jGh" id="EQ9-AV-zRI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJU-Vx-yUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
