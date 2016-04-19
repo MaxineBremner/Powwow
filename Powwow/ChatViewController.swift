@@ -42,6 +42,7 @@ class ChatViewController: UIViewController {
                 }
                 
                 self.tableView.reloadData()
+                self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
             }
         }
     }
@@ -86,8 +87,7 @@ extension ChatViewController: UITableViewDataSource {
 }
 
 extension ChatViewController: UITableViewDelegate {
-    
-    
+
 }
 
 
@@ -100,7 +100,6 @@ extension ChatViewController: UITextFieldDelegate {
         }
         return true
     }
-    
 }
 
 
