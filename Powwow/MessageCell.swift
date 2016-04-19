@@ -23,7 +23,7 @@ class MessageCell: UITableViewCell  {
             backgroundColor = .redColor()
         }
         
-        //animateIn()
+        animateIn()
     }
     
     func animateIn() {

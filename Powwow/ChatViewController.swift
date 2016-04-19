@@ -28,7 +28,6 @@ class ChatViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         timer!.invalidate()
-        
     }
 
         

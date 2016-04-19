@@ -41,6 +41,7 @@ extension ShowsViewContoller: UITableViewDataSource {
         
         let show = shows[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        
 
         let cellTitleLabel = cell?.viewWithTag(1) as! UILabel
         cellTitleLabel.text = show.title + " \(show.id)"
@@ -60,6 +61,7 @@ extension ShowsViewContoller: UITableViewDelegate {
         let show = shows[indexPath.row]
         performSegueWithIdentifier("ShowChat", sender: show)
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
     }
     
 
