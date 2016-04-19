@@ -1,0 +1,6 @@
+framework module UpdateKit {
+  umbrella header "UpdateKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -8,16 +8,19 @@
 
 import UIKit
 import CoreData
-
+import UpdateKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let updateKit = UpdateKit()
+        updateKit.firstLaunch {
+            NSUserDefaults.standardUserDefaults().setValue(randomString(64), forKey: "User")
+        }
         return true
     }
 

@@ -8,6 +8,7 @@ class ChatViewController: UIViewController {
     var messages = [Message]()
     var show: Show!
     var timer: NSTimer?
+    var user = NSUserDefaults.standardUserDefaults().valueForKey("User") as! String
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
@@ -56,7 +57,8 @@ class ChatViewController: UIViewController {
         
         let parameters = [
             "program_id": "\(show.id)",
-            "message": message
+            "message": message,
+            "user": user
         ]
         
         Alamofire.request(.POST, "http://kylegoslan.co.uk/powwow/new-message.php", parameters: parameters).response { request, response, data, error in
@@ -76,6 +78,10 @@ extension ChatViewController: UITableViewDataSource {
         
         let cellTitleLabel = cell?.viewWithTag(1) as! UILabel
         cellTitleLabel.text = message.message
+        
+        if message.isUser(user) {
+            cell?.backgroundColor = .redColor()
+        }
         
         return cell!
     }

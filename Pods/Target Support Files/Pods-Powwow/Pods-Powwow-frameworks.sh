@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Powwow/Alamofire.framework"
   install_framework "Pods-Powwow/SwiftyJSON.framework"
+  install_framework "Pods-Powwow/UpdateKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Powwow/Alamofire.framework"
   install_framework "Pods-Powwow/SwiftyJSON.framework"
+  install_framework "Pods-Powwow/UpdateKit.framework"
 fi

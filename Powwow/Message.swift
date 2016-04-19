@@ -16,6 +16,7 @@ class Message {
     let id: Int!
     let message: String!
     let showId: Int!
+    let user: String!
     
     
     init(data: JSON) {
@@ -23,7 +24,12 @@ class Message {
         message = data["Message"].stringValue
         id = data["Id"].intValue
         showId = data["ProgramId"].intValue
+        user = data["User"].stringValue
         
+    }
+    
+    func isUser(user: String) -> Bool {
+        return user == self.user
     }
     
 }

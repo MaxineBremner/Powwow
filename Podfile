@@ -4,5 +4,6 @@ use_frameworks!
 target 'Powwow' do
 	pod 'Alamofire'
 	pod 'SwiftyJSON'
+    pod 'UpdateKit'
 end
 
