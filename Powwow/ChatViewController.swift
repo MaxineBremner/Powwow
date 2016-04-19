@@ -74,16 +74,11 @@ extension ChatViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let message = messages[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MessageCell
+        cell.message = message
+        cell.updateView()
         
-        let cellTitleLabel = cell?.viewWithTag(1) as! UILabel
-        cellTitleLabel.text = message.message
-        
-        if message.isUser(user) {
-            cell?.backgroundColor = .redColor()
-        }
-        
-        return cell!
+        return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
