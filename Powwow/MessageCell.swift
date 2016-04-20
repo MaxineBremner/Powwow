@@ -20,7 +20,7 @@ class MessageCell: UITableViewCell  {
         messageLabel.text = message.message
         messageLabel.alpha = 1
         if message.isUser(user){
-            backgroundColor = .redColor()
+            backgroundColor = .purpleColor()
         }
         
         
@@ -31,8 +31,7 @@ class MessageCell: UITableViewCell  {
         UIView.animateWithDuration(1) { () -> Void in
             self.messageLabel.alpha = 1
         
-        //MessageCell.animationDidStop(anim: CAAnimation, finished: true)
-            
+                
         }
         
     }

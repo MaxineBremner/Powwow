@@ -13,10 +13,15 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChat()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
+        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
+        
+        textField.becomeFirstResponder()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -25,12 +30,13 @@ class ChatViewController: UIViewController {
 
     }
     
+    
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         timer!.invalidate()
     }
+    
 
-        
     func updateChat() {
         Alamofire.request(.POST, "http://kylegoslan.co.uk/powwow/messages.php", parameters: ["program_id": "\(show.id)"]).response { request, response, data, error in
             if let data = data {
@@ -67,6 +73,16 @@ class ChatViewController: UIViewController {
             self.textField.text = nil
         }
     }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        let info = notification.userInfo!
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        print(keyboardFrame)
+        UIView.animateWithDuration(0.5, animations: {
+            self.bottomConstraint.constant = keyboardFrame.size.height + 20
+        })
+    }
+    
 }
 
 
@@ -87,6 +103,39 @@ extension ChatViewController: UITableViewDataSource {
     }
     
 }
+
+/*bit that I have inserted keyboard but doesn't work attempt:1
+
+    func animateTextField(textField: UITextField, up:Bool, withOffset offset: CGFloat) {
+        
+        let movementDistance : Int = -Int(offset)
+        let movementDuration : Double = 0.4
+        let movement : Int = (up ? movementDistance : -movementDistance)
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(movementDuration)
+        self.view.frame = CGRectOffset(self.view.frame, 0, CGFloat(movement)
+       // UIView.commitAnimations()
+    }
+
+    func textFieldDidBegingEditing(textField: UITextField) {
+        
+        self.animateTextField(textField, up: true, withOffset: textField.frame.origin.y / 2)
+    }
+
+    func textFieldDidEndEditing(textField: UITextField) {
+    
+        self.animateTextField(textField: up: false, withOffset: textField.frame.origin.y / 2)
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+*/
+        
+
+
+
 
 extension ChatViewController: UITableViewDelegate {
 

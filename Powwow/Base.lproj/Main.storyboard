@@ -139,6 +139,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Chats" id="UFj-lL-c0O"/>
                     <connections>
+                        <outlet property="bottomConstraint" destination="K9u-H8-4q8" id="G74-Gh-Pfb"/>
                         <outlet property="sendButton" destination="xJf-7O-sgz" id="Y00-Lx-9aQ"/>
                         <outlet property="tableView" destination="Ht1-On-41V" id="yBh-W1-s0H"/>
                         <outlet property="textField" destination="ELW-oD-jGh" id="EQ9-AV-zRI"/>
