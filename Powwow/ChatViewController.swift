@@ -9,7 +9,6 @@ class ChatViewController: UIViewController {
     var show: Show!
     var timer: NSTimer?
     var user = NSUserDefaults.standardUserDefaults().valueForKey("User") as! String
-    //inserted
     var keyboardDismissTapGesture: UIGestureRecognizer?
 
     @IBOutlet weak var tableView: UITableView!
