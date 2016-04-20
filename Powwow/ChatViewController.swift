@@ -16,6 +16,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +53,7 @@ class ChatViewController: UIViewController {
                 
                 self.tableView.reloadData()
                 if self.messages.count > 0 {
-                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
+                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom,  animated: true)
                 }
             }
         }
@@ -77,8 +78,6 @@ class ChatViewController: UIViewController {
         }
     }
     
- 
-    
     func keyboardWillShow(notification: NSNotification) {
         
         if keyboardDismissTapGesture == nil {
@@ -88,7 +87,7 @@ class ChatViewController: UIViewController {
             let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
             print(keyboardFrame)
             UIView.animateWithDuration(0.5, animations: {
-                self.bottomConstraint.constant = keyboardFrame.size.height + 5
+            self.bottomConstraint.constant = keyboardFrame.size.height + 5
             })
         }
         
@@ -126,17 +125,6 @@ class ChatViewController: UIViewController {
             self.bottomConstraint.constant = keyboardFrame.size.height + 5
         })
     }
-    
-    
-    func keyboardWillHide(notification: NSNotification) {
-        let info = notification.userInfo!
-        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        print(keyboardFrame)
-        UIView.animateWithDuration(0.5, animations: {
-            self.bottomConstraint.constant = keyboardFrame.size.height - 20
-        })
-    }
-}
 
 */
     
