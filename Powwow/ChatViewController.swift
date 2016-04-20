@@ -9,6 +9,8 @@ class ChatViewController: UIViewController {
     var show: Show!
     var timer: NSTimer?
     var user = NSUserDefaults.standardUserDefaults().valueForKey("User") as! String
+    //inserted
+    var keyboardDismissTapGesture: UIGestureRecognizer?
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
@@ -18,10 +20,11 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChat()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
+       
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
         
-        textField.becomeFirstResponder()
+        textField.becomeFirstResponder() //this makes the keyboard appear straight away
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -74,17 +77,69 @@ class ChatViewController: UIViewController {
         }
     }
     
+ 
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if keyboardDismissTapGesture == nil {
+            keyboardDismissTapGesture = UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard:"))
+            self.view.addGestureRecognizer(keyboardDismissTapGesture!)
+            let info = notification.userInfo!
+            let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+            print(keyboardFrame)
+            UIView.animateWithDuration(0.5, animations: {
+                self.bottomConstraint.constant = keyboardFrame.size.height + 5
+            })
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification){
+        if keyboardDismissTapGesture != nil
+        {
+            self.view.removeGestureRecognizer(keyboardDismissTapGesture!)
+            keyboardDismissTapGesture = nil
+            let info = notification.userInfo!
+            let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+            print(keyboardFrame)
+            UIView.animateWithDuration(0.5, animations: {
+                self.bottomConstraint.constant = keyboardFrame.size.height + 5
+            })
+        }
+        
+    }
+        
+    func dismissKeyboard(sender: AnyObject) {
+          textField?.resignFirstResponder()
+        }
+    }
+
+
+    /*
+    
+    // kyle's
     func keyboardWillShow(notification: NSNotification) {
         let info = notification.userInfo!
         let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
         print(keyboardFrame)
         UIView.animateWithDuration(0.5, animations: {
-            self.bottomConstraint.constant = keyboardFrame.size.height + 20
+            self.bottomConstraint.constant = keyboardFrame.size.height + 5
         })
     }
     
+    
+    func keyboardWillHide(notification: NSNotification) {
+        let info = notification.userInfo!
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
+        print(keyboardFrame)
+        UIView.animateWithDuration(0.5, animations: {
+            self.bottomConstraint.constant = keyboardFrame.size.height - 20
+        })
+    }
 }
 
+*/
+    
 
 extension ChatViewController: UITableViewDataSource {
     
