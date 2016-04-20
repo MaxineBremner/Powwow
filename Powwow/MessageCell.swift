@@ -23,12 +23,16 @@ class MessageCell: UITableViewCell  {
             backgroundColor = .redColor()
         }
         
+        
         animateIn()
     }
     
     func animateIn() {
         UIView.animateWithDuration(1) { () -> Void in
             self.messageLabel.alpha = 1
+        
+        //MessageCell.animationDidStop(anim: CAAnimation, finished: true)
+            
         }
         
     }
