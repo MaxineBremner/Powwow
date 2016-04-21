@@ -21,7 +21,7 @@ class MessageCell: UITableViewCell  {
         messageLabel.alpha = 1
         if message.isUser(user){
            backgroundColor = UIColor(red: (30/255.0), green: (189/255.0), blue: (200/255.0), alpha: 1.0)
-            //backgroundColor = .greyColor()
+        
         }
         
         
