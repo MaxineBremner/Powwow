@@ -47,6 +47,25 @@ class ChatViewController: UIViewController, CLLocationManagerDelegate {
         timer!.invalidate()
     }
     
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+    
+        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: { (placemarks, error) ->
+            Void in
+        
+            if error!= nil
+            {
+            println("Error: " + error.locatizedDescription)
+                return
+            }
+            if.placemarks.count > 0
+        }
+            let pm = placemarks[0] as! CLPlacemark
+            self.displayLocationInfo(pm)
+    }
+        
+}
+    
 
     func updateChat() {
         Alamofire.request(.POST, "http://kylegoslan.co.uk/powwow/messages.php", parameters: ["program_id": "\(show.id)"]).response { request, response, data, error in
@@ -119,7 +138,6 @@ class ChatViewController: UIViewController, CLLocationManagerDelegate {
           textField?.resignFirstResponder()
         }
     }
-
 
     /*
     
