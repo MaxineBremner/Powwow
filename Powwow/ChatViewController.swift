@@ -2,8 +2,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import MessageUI
+import CoreLocation
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, CLLocationManagerDelegate {
     
     var messages = [Message]()
     var show: Show!
