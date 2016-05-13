@@ -6,6 +6,8 @@ import CoreLocation
 
 class ChatViewController: UIViewController, CLLocationManagerDelegate {
     
+    let locationManager = CLLocationManager()
+    
     var messages = [Message]()
     var show: Show!
     var timer: NSTimer?
@@ -26,6 +28,11 @@ class ChatViewController: UIViewController, CLLocationManagerDelegate {
     NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
         
         textField.becomeFirstResponder() //this makes the keyboard appear straight away
+        
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
     }
     
     override func viewDidAppear(animated: Bool) {
