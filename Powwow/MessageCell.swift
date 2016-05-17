@@ -43,11 +43,11 @@ class MessageCell: UITableViewCell  {
     
     func animateIn() {
         UIView.animateWithDuration(1) { () -> Void in
-            self.messageLabel.alpha = 3
+            self.messageLabel.alpha = 5
         
                 
         }
         
     }
     
-}
+}   
