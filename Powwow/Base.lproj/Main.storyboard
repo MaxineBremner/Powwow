@@ -182,23 +182,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-ne-CSt">
-                                <rect key="frame" x="18" y="494" width="564" height="31"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq2-nG-aah">
-                                <rect key="frame" x="295" y="448" width="11" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq2-nG-aah">
+                                <rect key="frame" x="295" y="344" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="0.12941176469999999" green="0.69411764710000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find people nearby you..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-tY-cqz">
+                                <rect key="frame" x="204" y="155" width="193" height="21"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" header="YES"/>
+                                </accessibility>
+                                <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.12941176469999999" green="0.69411764710000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-ne-CSt">
+                                <rect key="frame" x="18" y="410" width="564" height="31"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.12941176469999999" green="0.69411764710000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="o9b-tY-cqz" firstAttribute="centerX" secondItem="gq2-nG-aah" secondAttribute="centerX" id="AcI-yP-OJu"/>
                             <constraint firstItem="QKj-ne-CSt" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leadingMargin" id="U3I-Nz-QLO"/>
-                            <constraint firstItem="fb5-Je-vL5" firstAttribute="top" secondItem="QKj-ne-CSt" secondAttribute="bottom" constant="76" id="VhB-H6-TDz"/>
+                            <constraint firstItem="fb5-Je-vL5" firstAttribute="top" secondItem="QKj-ne-CSt" secondAttribute="bottom" constant="160" id="VhB-H6-TDz"/>
                             <constraint firstItem="QKj-ne-CSt" firstAttribute="centerX" secondItem="gq2-nG-aah" secondAttribute="centerX" id="Z89-yp-6Iz"/>
+                            <constraint firstItem="o9b-tY-cqz" firstAttribute="top" secondItem="n2A-3m-ykT" secondAttribute="bottom" constant="91" id="jb5-Q9-tQJ"/>
                             <constraint firstItem="QKj-ne-CSt" firstAttribute="trailing" secondItem="A82-nm-IbF" secondAttribute="trailingMargin" id="jc9-HZ-ViJ"/>
-                            <constraint firstItem="QKj-ne-CSt" firstAttribute="top" secondItem="gq2-nG-aah" secondAttribute="bottom" constant="25" id="prD-Wx-PcS"/>
+                            <constraint firstItem="QKj-ne-CSt" firstAttribute="top" secondItem="gq2-nG-aah" secondAttribute="bottom" constant="45" id="prD-Wx-PcS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Location Settings" id="4qe-Tt-s4Q"/>
