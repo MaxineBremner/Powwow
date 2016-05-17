@@ -22,11 +22,13 @@ class MessageCell: UITableViewCell  {
         messageLabel.text = message.message
         messageLabel.alpha = 1
         if message.isUser(user){
-            backgroundColor = UIColor(red: (30/255.0), green: (189/255.0), blue: (200/255.0), alpha: 1.0)
+            messageLabel.textColor = UIColor(red: (30/255.0), green: (189/255.0), blue: (200/255.0), alpha: 1.0)
             messageLabel.textAlignment = .Right
             distanceLabel.textAlignment = .Right
         } else {
             messageLabel.textAlignment = .Left
+            messageLabel.textColor = UIColor(red: (14/255.0), green: (151/255.0), blue: (160/255.0), alpha: 1.0)
+            
         }
     
         
