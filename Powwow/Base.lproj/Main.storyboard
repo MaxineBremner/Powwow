@@ -68,15 +68,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-On-41V">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-On-41V">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="3M6-Po-MUK" customClass="MessageCell" customModule="Powwow" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="69" id="3M6-Po-MUK" customClass="MessageCell" customModule="Powwow" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3M6-Po-MUK" id="IBC-K8-ian">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xo8-jw-zGn">
@@ -85,14 +85,24 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiL-f8-90l">
+                                                    <rect key="frame" x="8" y="39" width="584" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Xo8-jw-zGn" firstAttribute="leading" secondItem="IBC-K8-ian" secondAttribute="leadingMargin" id="8Ug-Zc-ej8"/>
-                                                <constraint firstItem="Xo8-jw-zGn" firstAttribute="trailing" secondItem="IBC-K8-ian" secondAttribute="trailingMargin" id="Qyw-F3-uHO"/>
-                                                <constraint firstItem="Xo8-jw-zGn" firstAttribute="centerY" secondItem="IBC-K8-ian" secondAttribute="centerY" id="i7s-pg-vTR"/>
+                                                <constraint firstItem="Xo8-jw-zGn" firstAttribute="leading" secondItem="YiL-f8-90l" secondAttribute="leading" id="CAc-5n-HcI"/>
+                                                <constraint firstItem="YiL-f8-90l" firstAttribute="top" secondItem="Xo8-jw-zGn" secondAttribute="bottom" constant="7" id="Prf-vW-PkX"/>
+                                                <constraint firstItem="Xo8-jw-zGn" firstAttribute="leading" secondItem="IBC-K8-ian" secondAttribute="leadingMargin" id="Tf5-GH-b4I"/>
+                                                <constraint firstItem="YiL-f8-90l" firstAttribute="bottom" secondItem="IBC-K8-ian" secondAttribute="bottomMargin" id="Vpl-ZU-ErI"/>
+                                                <constraint firstItem="YiL-f8-90l" firstAttribute="trailing" secondItem="IBC-K8-ian" secondAttribute="trailingMargin" id="XJF-GA-Zrx"/>
+                                                <constraint firstItem="YiL-f8-90l" firstAttribute="trailing" secondItem="Xo8-jw-zGn" secondAttribute="trailing" id="woD-Jo-4kz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="distanceLabel" destination="YiL-f8-90l" id="AN3-dE-9tG"/>
                                             <outlet property="messageLabel" destination="Xo8-jw-zGn" id="Z2h-Bv-ch2"/>
                                         </connections>
                                     </tableViewCell>

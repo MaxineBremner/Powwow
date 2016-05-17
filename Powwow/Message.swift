@@ -10,6 +10,7 @@
 
 import Foundation
 import SwiftyJSON
+import CoreLocation
 
 class Message {
     
@@ -17,7 +18,7 @@ class Message {
     let message: String!
     let showId: Int!
     let user: String!
-    
+    var location: CLLocation?
     
     init(data: JSON) {
         
@@ -26,6 +27,9 @@ class Message {
         showId = data["ProgramId"].intValue
         user = data["User"].stringValue
         
+        if data["Lat"].doubleValue != 0.0 {
+            location = CLLocation(latitude: data["Lat"].doubleValue, longitude: data["Lng"].doubleValue)
+        }
     }
     
     func isUser(user: String) -> Bool {

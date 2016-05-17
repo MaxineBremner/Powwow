@@ -7,22 +7,32 @@
 //
 
 import UIKit
+import CoreLocation
 
 class MessageCell: UITableViewCell  {
     
     var user = NSUserDefaults.standardUserDefaults().valueForKey("User") as! String
     
+    @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     
     var message: Message!
     
-    func updateView() {
+    func updateView(currentLocation: CLLocation?) {
         messageLabel.text = message.message
         messageLabel.alpha = 1
         if message.isUser(user){
             backgroundColor = .purpleColor()
+            messageLabel.textAlignment = .Right
+        } else {
+            messageLabel.textAlignment = .Left
         }
         
+        if let currentLocation = currentLocation, messageLocation = message.location {
+            distanceLabel.text = "\((currentLocation.distanceFromLocation(messageLocation) / 1000)) kilometers away"
+        } else {
+            distanceLabel.text = "Location unknowen"
+        }
         
         animateIn()
     }

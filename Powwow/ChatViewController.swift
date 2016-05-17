@@ -2,6 +2,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import MessageUI
+import CoreLocation
 
 class ChatViewController: UIViewController {
     
@@ -10,6 +11,8 @@ class ChatViewController: UIViewController {
     var timer: NSTimer?
     var user = NSUserDefaults.standardUserDefaults().valueForKey("User") as! String
     var keyboardDismissTapGesture: UIGestureRecognizer?
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
@@ -21,16 +24,21 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         updateChat()
        
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
-    NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
         
         textField.becomeFirstResponder() //this makes the keyboard appear straight away
+        
+        
+        locationManager.requestAlwaysAuthorization()
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "updateChat", userInfo: nil, repeats: true)
-
     }
     
     
@@ -47,7 +55,7 @@ class ChatViewController: UIViewController {
                 self.messages.removeAll()
                 for message in json["Messages"].arrayValue {
                     let newMessage = Message(data: message)
-                    self.messages.append(newMessage)
+                    self.filterMessages(newMessage)
                 }
                 
                 self.tableView.reloadData()
@@ -59,17 +67,33 @@ class ChatViewController: UIViewController {
     }
     
     
+    func filterMessages(message: Message) {
+        guard let location = message.location else { return }
+        
+        if let currentLocation = currentLocation {
+            //if location.distanceFromLocation(currentLocation) < 1000 {
+                messages.append(message)
+            //}
+        }
+    }
+    
+    
     @IBAction func sendMessage(sender: AnyObject) {
         
         guard let message = textField.text where !textField.text!.isEmpty else {
             return
         }
         
-        let parameters = [
+        var parameters = [
             "program_id": "\(show.id)",
             "message": message,
-            "user": user
+            "user": user,
         ]
+        
+        if let currentLocation = currentLocation {
+            parameters["lat"] = "\(currentLocation.coordinate.latitude)"
+            parameters["lng"] = "\(currentLocation.coordinate.longitude)"
+        }
         
         Alamofire.request(.POST, "http://kylegoslan.co.uk/powwow/new-message.php", parameters: parameters).response { request, response, data, error in
             self.updateChat()
@@ -135,7 +159,7 @@ extension ChatViewController: UITableViewDataSource {
         let message = messages[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MessageCell
         cell.message = message
-        cell.updateView()
+        cell.updateView(currentLocation)
         
         return cell
     }
@@ -174,9 +198,6 @@ extension ChatViewController: UITableViewDataSource {
         return true
     }
 */
-        
-
-
 
 
 extension ChatViewController: UITableViewDelegate {
@@ -194,6 +215,21 @@ extension ChatViewController: UITextFieldDelegate {
         return true
     }
 }
+
+extension ChatViewController: CLLocationManagerDelegate {
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let newLocation = locations.last
+        
+        if let newLocation = newLocation {
+            currentLocation = newLocation
+        }
+        
+    }
+    
+}
+
 
 
 

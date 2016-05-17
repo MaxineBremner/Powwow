@@ -169,12 +169,14 @@
 				3A33DF6DC01DE7C521A0CAF50138BB73 /* SwiftyJSON.swift */,
 				0EC921F068476836CDDC1CF2C2E592A1 /* Support Files */,
 			);
-			path = SwiftyJSON;
+			name = SwiftyJSON;
+			path = ../SwiftyJSON;
 			sourceTree = "<group>";
 		};
 		0E5CA0238E8E93E5D9D52CC52D3952E8 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
+				096B6D24335F58F5D301F8F0DDA8CDCA /* SwiftyJSON */,
 				FE27BCE12A91A3AAE5E435016E03533D /* Alamofire.swift */,
 				6F4DA6CD98AC66C212F9B18F333D1345 /* Download.swift */,
 				B7557026A9FC2A5CAEBA43145F712F06 /* Error.swift */,
@@ -212,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				0E5CA0238E8E93E5D9D52CC52D3952E8 /* Alamofire */,
-				096B6D24335F58F5D301F8F0DDA8CDCA /* SwiftyJSON */,
 				6FF40A6ADFF1247D2CB40C3952B32552 /* UpdateKit */,
 			);
 			name = Pods;
