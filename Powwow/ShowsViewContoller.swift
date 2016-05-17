@@ -31,16 +31,17 @@ class ShowsViewContoller: UIViewController {
             let vc = segue.destinationViewController as! ChatViewController
             vc.show = sender as! Show
         
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ChatLocationSlider" {
             let vc = segue.destinationViewController as! ChatViewController
             vc.show = sender as! Show
-        
         }
+       }
     }
-
+      
 }
-
+    
+}
 
 extension ShowsViewContoller: UITableViewDataSource {
     

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18010FCA1CC62B3F000204FB /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18010FC91CC62B3F000204FB /* Functions.swift */; };
 		18010FCC1CC62EEE000204FB /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18010FCB1CC62EEE000204FB /* MessageCell.swift */; };
+		189285D31CEB585300B06DAD /* LocationSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189285D21CEB585300B06DAD /* LocationSlider.swift */; settings = {ASSET_TAGS = (); }; };
 		27192C191CBCF553004D1415 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27192C181CBCF553004D1415 /* ChatViewController.swift */; };
 		27192C1B1CBCF69F004D1415 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27192C1A1CBCF69F004D1415 /* Message.swift */; };
 		27A3E7C11BF637DD004C7EFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A3E7C01BF637DD004C7EFB /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		18010FC91CC62B3F000204FB /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		18010FCB1CC62EEE000204FB /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		189285D21CEB585300B06DAD /* LocationSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSlider.swift; sourceTree = "<group>"; };
 		27192C181CBCF553004D1415 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		27192C1A1CBCF69F004D1415 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		27A3E7BD1BF637DC004C7EFB /* Powwow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Powwow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				27A3E7C01BF637DD004C7EFB /* AppDelegate.swift */,
 				18010FC91CC62B3F000204FB /* Functions.swift */,
 				27A3E7C21BF637DD004C7EFB /* ShowsViewContoller.swift */,
+				189285D21CEB585300B06DAD /* LocationSlider.swift */,
 				27192C181CBCF553004D1415 /* ChatViewController.swift */,
 				18010FCB1CC62EEE000204FB /* MessageCell.swift */,
 				27A3E7D51BF63B4B004C7EFB /* Show.swift */,
@@ -243,6 +246,7 @@
 				27A3E7C91BF637DD004C7EFB /* Powwow.xcdatamodeld in Sources */,
 				18010FCC1CC62EEE000204FB /* MessageCell.swift in Sources */,
 				27A3E7C31BF637DD004C7EFB /* ShowsViewContoller.swift in Sources */,
+				189285D31CEB585300B06DAD /* LocationSlider.swift in Sources */,
 				27A3E7D61BF63B4B004C7EFB /* Show.swift in Sources */,
 				18010FCA1CC62B3F000204FB /* Functions.swift in Sources */,
 				27192C1B1CBCF69F004D1415 /* Message.swift in Sources */,
