@@ -147,10 +147,7 @@ extension ChatViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MessageCell
         cell.message = message
         cell.updateView(currentLocation)
-        //cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 20
-
-        
         return cell
     }
     

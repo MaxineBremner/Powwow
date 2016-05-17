@@ -150,9 +150,11 @@
                     <navigationItem key="navigationItem" title="Chats" id="UFj-lL-c0O">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="RKE-sx-GPb">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uAc-da-sYU">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <rect key="frame" x="519" y="7" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Discovery Settings "/>
+                                <state key="normal" title="Settings ">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.69411764710000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="dm5-GO-Xi3" kind="show" id="MW9-57-NA2"/>
                                 </connections>
