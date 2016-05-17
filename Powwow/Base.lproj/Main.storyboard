@@ -154,7 +154,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Discovery Settings "/>
                                 <connections>
-                                    <segue destination="dm5-GO-Xi3" kind="show" identifier="LocationSlider" id="0YI-fz-M3Y"/>
+                                    <segue destination="dm5-GO-Xi3" kind="show" id="MW9-57-NA2"/>
                                 </connections>
                             </button>
                         </barButtonItem>
