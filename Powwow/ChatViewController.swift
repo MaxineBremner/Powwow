@@ -33,9 +33,6 @@ class ChatViewController: UIViewController {
         
         textField.becomeFirstResponder() //this makes the keyboard appear straight away
         
-        locationManager.requestAlwaysAuthorization()
-        locationManager.delegate = self
-        locationManager.startUpdatingLocation()
 
     }
     
