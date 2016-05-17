@@ -140,20 +140,7 @@ class ChatViewController: UIViewController {
         }
     }
 
-    /*
-    
-    // kyle's
-    func keyboardWillShow(notification: NSNotification) {
-        let info = notification.userInfo!
-        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-        print(keyboardFrame)
-        UIView.animateWithDuration(0.5, animations: {
-            self.bottomConstraint.constant = keyboardFrame.size.height + 5
-        })
-    }
 
-*/
-    
 
 extension ChatViewController: UITableViewDataSource {
     
