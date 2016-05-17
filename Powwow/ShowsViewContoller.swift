@@ -12,7 +12,7 @@ class ShowsViewContoller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request(.GET, "http://kylegoslan.co.uk/powwow/programs.php").response { request, response, data, error in
+        Alamofire.request(.GET, "http://178.62.89.129/programs.php").response { request, response, data, error in
             if let data = data {
                 let json = JSON(data: data)
                 for program in json["Programs"].arrayValue {

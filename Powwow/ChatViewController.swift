@@ -53,7 +53,7 @@ class ChatViewController: UIViewController {
     
 
     func updateChat() {
-        Alamofire.request(.POST, "http://kylegoslan.co.uk/powwow/messages.php", parameters: ["program_id": "\(show.id)"]).response { request, response, data, error in
+        Alamofire.request(.POST, "http://178.62.89.129/messages.php", parameters: ["program_id": "\(show.id)"]).response { request, response, data, error in
             if let data = data {
                 let json = JSON(data: data)
                 self.messages.removeAll()
@@ -75,9 +75,9 @@ class ChatViewController: UIViewController {
         guard let location = message.location else { return }
         
         if let currentLocation = currentLocation {
-            //if location.distanceFromLocation(currentLocation) < 1000 {
+            if location.distanceFromLocation(currentLocation) < 1000 {
                 messages.append(message)
-            //}
+            }
         }
     }
     
@@ -99,7 +99,7 @@ class ChatViewController: UIViewController {
             parameters["lng"] = "\(currentLocation.coordinate.longitude)"
         }
         
-        Alamofire.request(.POST, "http://kylegoslan.co.uk/powwow/new-message.php", parameters: parameters).response { request, response, data, error in
+        Alamofire.request(.POST, "http://178.62.89.129/new-message.php", parameters: parameters).response { request, response, data, error in
             self.updateChat()
             self.textField.text = nil
         }
