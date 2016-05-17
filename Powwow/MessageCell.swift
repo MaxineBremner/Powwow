@@ -24,15 +24,19 @@ class MessageCell: UITableViewCell  {
         if message.isUser(user){
             backgroundColor = UIColor(red: (30/255.0), green: (189/255.0), blue: (200/255.0), alpha: 1.0)
             messageLabel.textAlignment = .Right
+            distanceLabel.textAlignment = .Right
         } else {
             messageLabel.textAlignment = .Left
         }
     
+        
         if let currentLocation = currentLocation, messageLocation = message.location {
             distanceLabel.text = "\((currentLocation.distanceFromLocation(messageLocation) / 1000)) kilometers away"
         } else {
             distanceLabel.text = "Location unknowen"
         }
+        
+        
         
         animateIn()
     }
