@@ -4,7 +4,7 @@ import SwiftyJSON
 import MessageUI
 import CoreLocation
 
-class ChatViewController: UIViewController, CLLocationManagerDelegate {
+class ChatViewController: UIViewController {
     
     let locationManager = CLLocationManager()
     
@@ -13,7 +13,6 @@ class ChatViewController: UIViewController, CLLocationManagerDelegate {
     var timer: NSTimer?
     var user = NSUserDefaults.standardUserDefaults().valueForKey("User") as! String
     var keyboardDismissTapGesture: UIGestureRecognizer?
-    let locationManager = CLLocationManager()
     var currentLocation: CLLocation?
 
     @IBOutlet weak var tableView: UITableView!
