@@ -23,11 +23,9 @@ class ChatViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateChat()
-        
-        self.locationManager.delegate = self
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
        
     NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
     NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
@@ -49,38 +47,6 @@ class ChatViewController: UIViewController, CLLocationManagerDelegate {
         timer!.invalidate()
     }
     
-    //the newest part that i've put in - since 3:00pm
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-    
-        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: { (placemarks, var error) ->
-            Void in
-        
-            if error != nil
-            {
-            print("Error: " + (error?.localizedDescription)!)
-                return
-            }
-            
-            if.placemarks.count > 0
-            {
-        
-                let pm = placemarks![0] as!
-                self.displayLocationInfo(pm)
-            }
-        })
-}
-
-    func displayLocationInfo(placemark: CLPlacemark) {
-        self.locationManager.stopUpdatingLocation()
-            print(placemark.locality)
-            print(placemark.postalCode)
-            print(placemark.administrativeArea)
-            print(placemark.country)
-    }
-    
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print("Error: " + error.localizedDescription)
-    }
     
 
     func updateChat() {
@@ -208,5 +174,18 @@ extension ChatViewController: UITextFieldDelegate {
     }
 }
 
+
+extension ChatViewController: CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let newLocation = locations.last
+        
+        if let newLocation = newLocation {
+            print(newLocation)
+        }
+        
+    }
+    
+}
 
 
