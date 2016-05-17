@@ -4,6 +4,7 @@ import SwiftyJSON
 import MessageUI
 import CoreLocation
 
+
 class ChatViewController: UIViewController {
     
     let locationManager = CLLocationManager()
@@ -134,9 +135,8 @@ class ChatViewController: UIViewController {
         
     func dismissKeyboard(sender: AnyObject) {
           textField?.resignFirstResponder()
-        }
     }
-
+}
 
 
 extension ChatViewController: UITableViewDataSource {
@@ -147,6 +147,9 @@ extension ChatViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MessageCell
         cell.message = message
         cell.updateView(currentLocation)
+        //cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 20
+
         
         return cell
     }
