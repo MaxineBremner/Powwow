@@ -35,6 +35,15 @@ class ShowsViewContoller: UIViewController {
 
 }
 
+/* link other screen
+    override func prepareForSegue(segue: UIStoryboardSegue, sender sender: AnyObject?) {
+        if segue.identifier == "LocationSlider" {
+            let vc = segue.destinationViewController as! ChatViewController
+            vc.slider = sender as! Slider
+        } 
+}*/
+
+
 
 extension ShowsViewContoller: UITableViewDataSource {
     

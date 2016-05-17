@@ -147,13 +147,23 @@
                             <constraint firstAttribute="trailing" secondItem="Ht1-On-41V" secondAttribute="trailing" id="WZX-db-Sq4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Chats" id="UFj-lL-c0O"/>
+                    <navigationItem key="navigationItem" title="Chats" id="UFj-lL-c0O">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="RKE-sx-GPb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uAc-da-sYU">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Discovery Settings "/>
+                                <connections>
+                                    <segue destination="dm5-GO-Xi3" kind="show" identifier="LocationSlider" id="0YI-fz-M3Y"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bottomConstraint" destination="K9u-H8-4q8" id="G74-Gh-Pfb"/>
                         <outlet property="sendButton" destination="xJf-7O-sgz" id="Y00-Lx-9aQ"/>
                         <outlet property="tableView" destination="Ht1-On-41V" id="yBh-W1-s0H"/>
                         <outlet property="textField" destination="ELW-oD-jGh" id="EQ9-AV-zRI"/>
-                        <segue destination="dm5-GO-Xi3" kind="show" identifier="locationsetting" id="XSM-wb-X0w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJU-Vx-yUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
