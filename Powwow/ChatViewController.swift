@@ -8,6 +8,7 @@ import CoreLocation
 class ChatViewController: UIViewController {
     
     let locationManager = CLLocationManager()
+    var locationDistance: Int?
     
     var messages = [Message]()
     var show: Show!
@@ -24,7 +25,6 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateChat()
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
@@ -34,11 +34,21 @@ class ChatViewController: UIViewController {
         
         textField.becomeFirstResponder() //this makes the keyboard appear straight away
         
-
     }
+
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        locationDistance = defaults.integerForKey("Distance")
+        
+        if locationDistance == nil {
+            locationDistance = 1000
+        }
+        
+        updateChat()
+        
         timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "updateChat", userInfo: nil, repeats: true)
     }
     
@@ -47,8 +57,6 @@ class ChatViewController: UIViewController {
         super.viewWillDisappear(animated)
         timer!.invalidate()
     }
-    
-    
 
     func updateChat() {
         Alamofire.request(.POST, "http://178.62.89.129/messages.php", parameters: ["program_id": "\(show.id)"]).response { request, response, data, error in
@@ -59,7 +67,6 @@ class ChatViewController: UIViewController {
                     let newMessage = Message(data: message)
                     self.filterMessages(newMessage)
                 }
-                
                 self.tableView.reloadData()
                 if self.messages.count > 0 {
                     self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom,  animated: true)
@@ -70,10 +77,13 @@ class ChatViewController: UIViewController {
     
     
     func filterMessages(message: Message) {
+        
         guard let location = message.location else { return }
         
+        print(locationDistance)
+        
         if let currentLocation = currentLocation {
-            if location.distanceFromLocation(currentLocation) < 1000 {
+            if Int(location.distanceFromLocation(currentLocation) / 1000) < locationDistance! {
                 messages.append(message)
             }
         }
