@@ -29,7 +29,9 @@ class MessageCell: UITableViewCell  {
             messageLabel.textAlignment = .Left
             messageLabel.textColor = UIColor(red: (14/255.0), green: (151/255.0), blue: (160/255.0), alpha: 1.0)
             
-        }        
+        }
+        
+        distanceLabel.font = distanceLabel.font.fontWithSize(8)
         
         if let currentLocation = currentLocation, messageLocation = message.location {
             distanceLabel.text = "\((currentLocation.distanceFromLocation(messageLocation) / 1000).roundToPlaces(2)) kilometers away"
