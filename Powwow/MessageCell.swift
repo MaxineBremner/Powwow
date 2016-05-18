@@ -39,6 +39,12 @@ class MessageCell: UITableViewCell  {
         }
         
         
+    /* round kilometres to decimal point
+        func roundToDecimals(decimals: Int = 2) -> CGFloat {
+            let multiplier = CGFloat(1^decimals)
+            return round(multiplier * self) / multiplier
+        } */
+        
         
         animateIn()
     }
