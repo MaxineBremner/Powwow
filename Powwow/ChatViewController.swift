@@ -40,8 +40,7 @@ class ChatViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        locationDistance = defaults.integerForKey("Distance")
+        locationDistance = NSUserDefaults.standardUserDefaults().integerForKey("Distance")
         
         if locationDistance == nil {
             locationDistance = 1000
