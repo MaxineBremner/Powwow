@@ -30,8 +30,9 @@ class MessageCell: UITableViewCell  {
                   } else {
             messageLabel.textAlignment = .Left
             messageLabel.textColor = UIColor(red: (14/255.0), green: (151/255.0), blue: (160/255.0), alpha: 1.0)
-            
         }
+        
+      
         
         distanceLabel.font = distanceLabel.font.fontWithSize(9)
         

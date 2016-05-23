@@ -116,6 +116,8 @@ class ChatViewController: UIViewController {
     
     
     
+    
+    
    func keyboardWillShow(notification: NSNotification) {
         
         if keyboardDismissTapGesture == nil {
