@@ -16,16 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundwithlogo" translatesAutoresizingMaskIntoConstraints="NO" id="QJ7-l3-vkf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-Om-4cp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QJ7-l3-vkf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8CP-bN-2NM"/>
-                            <constraint firstItem="QJ7-l3-vkf" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="Hw1-XT-zYI"/>
-                            <constraint firstItem="QJ7-l3-vkf" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="oSD-n9-VUw"/>
-                            <constraint firstAttribute="trailing" secondItem="QJ7-l3-vkf" secondAttribute="trailing" id="sLU-U8-Koj"/>
+                            <constraint firstAttribute="trailing" secondItem="3nl-Om-4cp" secondAttribute="trailing" id="32e-YI-hfs"/>
+                            <constraint firstItem="3nl-Om-4cp" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="SNi-N2-OJj"/>
+                            <constraint firstItem="3nl-Om-4cp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="dTJ-Hz-lbk"/>
+                            <constraint firstItem="3nl-Om-4cp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="uun-Zr-9S8"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundwithlogo" width="800" height="1280"/>
+        <image name="LaunchImage" width="800" height="1280"/>
     </resources>
 </document>

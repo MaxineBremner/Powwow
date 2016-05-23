@@ -114,13 +114,13 @@ class ChatViewController: UIViewController {
     
     //additional keyboard now
     
-    
-    
+
     
     
    func keyboardWillShow(notification: NSNotification) {
-        
+    
         if keyboardDismissTapGesture == nil {
+            
             keyboardDismissTapGesture = UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard:"))
             self.view.addGestureRecognizer(keyboardDismissTapGesture!)
             let info = notification.userInfo!
@@ -133,16 +133,19 @@ class ChatViewController: UIViewController {
         
     }
     
-    func keyboardWillHide(notification: NSNotification){
-        if keyboardDismissTapGesture != nil
-        {
+   func keyboardWillHide(notification: NSNotification){
+    
+        if keyboardDismissTapGesture != nil {
+            
+            keyboardDismissTapGesture = UITapGestureRecognizer(target: self, action: Selector("showKeyboard:"))
             self.view.removeGestureRecognizer(keyboardDismissTapGesture!)
             keyboardDismissTapGesture = nil
             let info = notification.userInfo!
             let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
             print(keyboardFrame)
             UIView.animateWithDuration(0.5, animations: {
-                self.bottomConstraint.constant = keyboardFrame.size.height + 5
+            self.bottomConstraint.constant = keyboardFrame.size.height - 5
+            
             })
         }
         
@@ -153,7 +156,6 @@ class ChatViewController: UIViewController {
     }
 }
 
-    
     
 
 extension ChatViewController: UITableViewDataSource {
