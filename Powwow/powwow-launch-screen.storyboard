@@ -22,10 +22,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="3nl-Om-4cp" secondAttribute="trailing" id="32e-YI-hfs"/>
-                            <constraint firstItem="3nl-Om-4cp" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="SNi-N2-OJj"/>
-                            <constraint firstItem="3nl-Om-4cp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="dTJ-Hz-lbk"/>
-                            <constraint firstItem="3nl-Om-4cp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="uun-Zr-9S8"/>
+                            <constraint firstItem="3nl-Om-4cp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="S5R-qP-Ngp"/>
+                            <constraint firstItem="3nl-Om-4cp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="SF8-zS-kex"/>
+                            <constraint firstAttribute="trailing" secondItem="3nl-Om-4cp" secondAttribute="trailing" id="hW6-aZ-e0x"/>
+                            <constraint firstItem="3nl-Om-4cp" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="x4m-1U-6i5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchImage" width="800" height="1280"/>
+        <image name="LaunchImage" width="1242" height="2208"/>
     </resources>
 </document>
