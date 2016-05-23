@@ -33,10 +33,10 @@ class MessageCell: UITableViewCell  {
             
         }
         
-        distanceLabel.font = distanceLabel.font.fontWithSize(8)
+        distanceLabel.font = distanceLabel.font.fontWithSize(9)
         
         if let currentLocation = currentLocation, messageLocation = message.location {
-            distanceLabel.text = "\((currentLocation.distanceFromLocation(messageLocation) / 1000).roundToPlaces(2))k"
+            distanceLabel.text = "\((currentLocation.distanceFromLocation(messageLocation) / 1000).roundToPlaces(1))k"
         } else {
             distanceLabel.text = "Location unknown"
         }
