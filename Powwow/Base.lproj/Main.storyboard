@@ -29,16 +29,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundwithlogo" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-2r-BMf">
-                                                    <rect key="frame" x="200" y="6" width="200" height="65"/>
+                                                    <rect key="frame" x="256" y="7" width="88" height="63"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="65" id="0Wy-Fz-MnK"/>
-                                                        <constraint firstAttribute="width" constant="200" id="V9w-Kl-0CE"/>
+                                                        <constraint firstAttribute="width" constant="88" id="yYx-T2-cop"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerX" secondItem="ya8-ZR-tsi" secondAttribute="centerX" id="pEb-0w-xvw"/>
-                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerY" secondItem="ya8-ZR-tsi" secondAttribute="centerY" id="xdt-Zo-9be"/>
+                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="top" secondItem="ya8-ZR-tsi" secondAttribute="topMargin" constant="-1" id="AWK-5H-zd6"/>
+                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerX" secondItem="ya8-ZR-tsi" secondAttribute="centerX" id="GaY-t5-tkG"/>
+                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerY" secondItem="ya8-ZR-tsi" secondAttribute="centerY" id="I2X-xd-d2Y"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
