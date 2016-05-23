@@ -177,25 +177,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< Updated upstream
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundwithlogo" translatesAutoresizingMaskIntoConstraints="NO" id="hD7-pb-Plp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0k" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq2-nG-aah">
                                 <rect key="frame" x="89" y="462" width="422" height="36"/>
-=======
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-ne-CSt">
-                                <rect key="frame" x="18" y="500" width="564" height="31"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq2-nG-aah">
-                                <rect key="frame" x="289" y="462" width="22" height="30"/>
->>>>>>> Stashed changes
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="bJh-v4-rEd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.12941176469999999" green="0.69411764710000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find people near you..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-tY-cqz">
@@ -209,7 +200,7 @@
                                     <constraint firstAttribute="width" constant="239" id="YgL-Jk-11V"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.12941176469999999" green="0.69411764710000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="50" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-ne-CSt">
@@ -223,7 +214,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.12941176469999999" green="0.69411764710000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-<<<<<<< Updated upstream
                             <constraint firstItem="QKj-ne-CSt" firstAttribute="centerX" secondItem="o9b-tY-cqz" secondAttribute="centerX" id="8K3-lU-bE4"/>
                             <constraint firstItem="o9b-tY-cqz" firstAttribute="top" secondItem="n2A-3m-ykT" secondAttribute="bottom" constant="88" id="8S3-cT-jhW"/>
                             <constraint firstItem="hD7-pb-Plp" firstAttribute="bottom" secondItem="fb5-Je-vL5" secondAttribute="top" id="DUR-Xl-kH6"/>
@@ -236,16 +226,6 @@
                             <constraint firstItem="hD7-pb-Plp" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leading" id="bc1-xH-Kbr"/>
                             <constraint firstItem="gq2-nG-aah" firstAttribute="centerX" secondItem="A82-nm-IbF" secondAttribute="centerX" id="cUp-pf-Kpg"/>
                             <constraint firstItem="QKj-ne-CSt" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leadingMargin" constant="69" id="d74-dA-Fyd"/>
-=======
-                            <constraint firstItem="o9b-tY-cqz" firstAttribute="top" secondItem="n2A-3m-ykT" secondAttribute="bottom" constant="88" id="8S3-cT-jhW"/>
-                            <constraint firstItem="fb5-Je-vL5" firstAttribute="top" secondItem="QKj-ne-CSt" secondAttribute="bottom" constant="70" id="VhB-H6-TDz"/>
-                            <constraint firstItem="gq2-nG-aah" firstAttribute="centerX" secondItem="A82-nm-IbF" secondAttribute="centerX" id="Vrh-hu-WJ2"/>
-                            <constraint firstItem="o9b-tY-cqz" firstAttribute="centerX" secondItem="QKj-ne-CSt" secondAttribute="centerX" constant="0.5" id="WJ9-Br-lkg"/>
-                            <constraint firstItem="QKj-ne-CSt" firstAttribute="centerX" secondItem="gq2-nG-aah" secondAttribute="centerX" id="Z89-yp-6Iz"/>
-                            <constraint firstItem="gq2-nG-aah" firstAttribute="centerX" secondItem="QKj-ne-CSt" secondAttribute="centerX" id="jnx-zV-AJ5"/>
-                            <constraint firstItem="QKj-ne-CSt" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leadingMargin" id="oMe-Jg-xAg"/>
-                            <constraint firstItem="QKj-ne-CSt" firstAttribute="top" secondItem="gq2-nG-aah" secondAttribute="bottom" constant="8" id="prD-Wx-PcS"/>
->>>>>>> Stashed changes
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Location Settings" id="4qe-Tt-s4Q"/>
@@ -277,4 +257,7 @@
             <point key="canvasLocation" x="435" y="371.99999999999994"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundwithlogo" width="800" height="1280"/>
+    </resources>
 </document>

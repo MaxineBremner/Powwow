@@ -12,7 +12,7 @@ func randomString(length: Int) -> String {
     let charactersString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     let charactersArray : [Character] = Array(charactersString.characters)
     
-    var string = ""
+    var string = "x"
     for _ in 0..<length {
         string.append(charactersArray[Int(arc4random()) % charactersArray.count])
     }
