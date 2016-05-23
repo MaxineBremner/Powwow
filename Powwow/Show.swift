@@ -22,5 +22,7 @@ class Show {
         image = UIImage(named: title)
     
     }
+ 
     
+
 }
