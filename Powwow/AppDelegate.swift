@@ -20,10 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         let updateKit = UpdateKit()
         updateKit.firstLaunch {
-            NSUserDefaults.standardUserDefaults().setValue(randomString(64), forKey: "User")
+            NSUserDefaults.standardUserDefaults().setValue(randomString(62), forKey: "User")
         }
         
         let navBar = UINavigationBar.appearance()
+        
         navBar.tintColor = UIColor(red: (14/255.0), green: (151/255.0), blue: (160/255.0), alpha: 1.0)
         
         return true
