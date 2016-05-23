@@ -51,10 +51,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="oIK-gH-vgb" secondAttribute="trailing" id="FvZ-Kw-1Gt"/>
-                            <constraint firstItem="oIK-gH-vgb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OpK-Il-CGg"/>
-                            <constraint firstItem="oIK-gH-vgb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uhd-Qh-SvG"/>
-                            <constraint firstItem="oIK-gH-vgb" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="jkv-qh-bOA"/>
+                            <constraint firstItem="oIK-gH-vgb" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Hvs-jb-cPA"/>
+                            <constraint firstItem="oIK-gH-vgb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JH2-5m-9De"/>
+                            <constraint firstItem="oIK-gH-vgb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JRe-UT-CQG"/>
+                            <constraint firstAttribute="trailing" secondItem="oIK-gH-vgb" secondAttribute="trailing" id="oaG-lR-75e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shows" id="X8r-ug-B2m"/>
@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="371"/>
+            <point key="canvasLocation" x="1258" y="371"/>
         </scene>
         <!--Chat Room-->
         <scene sceneID="xKV-22-oH8">
@@ -79,6 +79,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plain-background-1" translatesAutoresizingMaskIntoConstraints="NO" id="fS3-g7-3bM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's on your mind?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-oD-jGh">
                                 <rect key="frame" x="20" y="550" width="521" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -175,7 +178,7 @@
             </objects>
             <point key="canvasLocation" x="1967" y="371"/>
         </scene>
-        <!--Location Settings-->
+        <!--Discovery Settings-->
         <scene sceneID="mpD-NN-K8O">
             <objects>
                 <viewController id="dm5-GO-Xi3" customClass="SliderViewController" customModule="Powwow" customModuleProvider="target" sceneMemberID="viewController">
@@ -187,7 +190,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="9NM-qm-N8c">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Gyo-I8-kbQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1500" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-ne-CSt">
@@ -198,14 +201,14 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find people near you..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-tY-cqz">
-                                <rect key="frame" x="141" y="144" width="319" height="43"/>
+                                <rect key="frame" x="141" y="146" width="319" height="43"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" header="YES"/>
                                 </accessibility>
                                 <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="319" id="IRk-3y-arY"/>
-                                    <constraint firstAttribute="height" constant="43" id="mGH-yn-muU"/>
+                                    <constraint firstAttribute="height" constant="43" id="m04-4z-0yt"/>
+                                    <constraint firstAttribute="width" constant="319" id="oij-WD-iEx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -232,22 +235,22 @@
                         <color key="tintColor" red="0.12941176469999999" green="0.69411764710000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gq2-nG-aah" firstAttribute="leading" secondItem="QKj-ne-CSt" secondAttribute="leading" id="1Ee-Re-efq"/>
-                            <constraint firstItem="gq2-nG-aah" firstAttribute="centerX" secondItem="o9b-tY-cqz" secondAttribute="centerX" id="2BY-2O-G8n"/>
-                            <constraint firstItem="9NM-qm-N8c" firstAttribute="bottom" secondItem="fb5-Je-vL5" secondAttribute="top" id="4OZ-4w-ZtS"/>
                             <constraint firstItem="gq2-nG-aah" firstAttribute="centerX" secondItem="A82-nm-IbF" secondAttribute="centerX" id="6z8-1i-BfD"/>
                             <constraint firstItem="81W-HQ-Re6" firstAttribute="centerX" secondItem="QKj-ne-CSt" secondAttribute="centerX" id="9Ax-aS-oJb"/>
-                            <constraint firstItem="9NM-qm-N8c" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leading" id="Bjp-Q0-7Ni"/>
+                            <constraint firstItem="o9b-tY-cqz" firstAttribute="centerX" secondItem="gq2-nG-aah" secondAttribute="centerX" id="ALE-yV-eFS"/>
                             <constraint firstItem="fb5-Je-vL5" firstAttribute="top" secondItem="QKj-ne-CSt" secondAttribute="bottom" constant="70" id="IPT-ob-dFi"/>
                             <constraint firstItem="81W-HQ-Re6" firstAttribute="top" secondItem="gq2-nG-aah" secondAttribute="bottom" constant="8" symbolic="YES" id="QGR-KR-MBd"/>
-                            <constraint firstItem="9NM-qm-N8c" firstAttribute="top" secondItem="A82-nm-IbF" secondAttribute="top" id="Rxx-SR-AsR"/>
-                            <constraint firstItem="9NM-qm-N8c" firstAttribute="centerX" secondItem="o9b-tY-cqz" secondAttribute="centerX" id="Xgb-Pr-s79"/>
                             <constraint firstItem="gq2-nG-aah" firstAttribute="trailing" secondItem="QKj-ne-CSt" secondAttribute="trailing" id="aNR-xJ-sK4"/>
                             <constraint firstItem="QKj-ne-CSt" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leadingMargin" constant="69" id="d74-dA-Fyd"/>
-                            <constraint firstItem="o9b-tY-cqz" firstAttribute="top" secondItem="n2A-3m-ykT" secondAttribute="bottom" constant="80" id="pHH-rJ-RKL"/>
+                            <constraint firstItem="Gyo-I8-kbQ" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leading" id="dVr-RF-fvo"/>
+                            <constraint firstItem="Gyo-I8-kbQ" firstAttribute="centerX" secondItem="QKj-ne-CSt" secondAttribute="centerX" id="mgv-PC-L4J"/>
+                            <constraint firstItem="o9b-tY-cqz" firstAttribute="top" secondItem="n2A-3m-ykT" secondAttribute="bottom" constant="82" id="ooM-Zt-5oR"/>
+                            <constraint firstItem="Gyo-I8-kbQ" firstAttribute="bottom" secondItem="fb5-Je-vL5" secondAttribute="top" id="rsC-I0-lDQ"/>
                             <constraint firstItem="QKj-ne-CSt" firstAttribute="top" secondItem="81W-HQ-Re6" secondAttribute="bottom" constant="13" id="tl7-Iz-pui"/>
+                            <constraint firstItem="Gyo-I8-kbQ" firstAttribute="top" secondItem="A82-nm-IbF" secondAttribute="top" id="z0e-pK-gsa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Location Settings" id="4qe-Tt-s4Q"/>
+                    <navigationItem key="navigationItem" title="Discovery Settings" id="4qe-Tt-s4Q"/>
                     <connections>
                         <outlet property="distanceLabel" destination="gq2-nG-aah" id="cSS-Od-2fM"/>
                         <outlet property="distanceSlider" destination="QKj-ne-CSt" id="7rv-kv-94y"/>
@@ -279,5 +282,6 @@
     <resources>
         <image name="Image" width="1500" height="2668"/>
         <image name="backgroundwithlogo" width="750" height="1334"/>
+        <image name="plain-background-1" width="1500" height="2668"/>
     </resources>
 </document>
