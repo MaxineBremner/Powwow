@@ -187,7 +187,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="discover-image" translatesAutoresizingMaskIntoConstraints="NO" id="USU-8S-ZXw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="9NM-qm-N8c">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1500" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-ne-CSt">
@@ -231,18 +231,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.12941176469999999" green="0.69411764710000001" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="USU-8S-ZXw" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leading" id="0Wq-Nw-Bf6"/>
                             <constraint firstItem="gq2-nG-aah" firstAttribute="leading" secondItem="QKj-ne-CSt" secondAttribute="leading" id="1Ee-Re-efq"/>
                             <constraint firstItem="gq2-nG-aah" firstAttribute="centerX" secondItem="o9b-tY-cqz" secondAttribute="centerX" id="2BY-2O-G8n"/>
+                            <constraint firstItem="9NM-qm-N8c" firstAttribute="bottom" secondItem="fb5-Je-vL5" secondAttribute="top" id="4OZ-4w-ZtS"/>
                             <constraint firstItem="gq2-nG-aah" firstAttribute="centerX" secondItem="A82-nm-IbF" secondAttribute="centerX" id="6z8-1i-BfD"/>
                             <constraint firstItem="81W-HQ-Re6" firstAttribute="centerX" secondItem="QKj-ne-CSt" secondAttribute="centerX" id="9Ax-aS-oJb"/>
-                            <constraint firstItem="USU-8S-ZXw" firstAttribute="top" secondItem="A82-nm-IbF" secondAttribute="top" id="EoY-eD-GKQ"/>
+                            <constraint firstItem="9NM-qm-N8c" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leading" id="Bjp-Q0-7Ni"/>
                             <constraint firstItem="fb5-Je-vL5" firstAttribute="top" secondItem="QKj-ne-CSt" secondAttribute="bottom" constant="70" id="IPT-ob-dFi"/>
                             <constraint firstItem="81W-HQ-Re6" firstAttribute="top" secondItem="gq2-nG-aah" secondAttribute="bottom" constant="8" symbolic="YES" id="QGR-KR-MBd"/>
-                            <constraint firstItem="USU-8S-ZXw" firstAttribute="centerX" secondItem="QKj-ne-CSt" secondAttribute="centerX" id="ZSq-Sb-gQu"/>
+                            <constraint firstItem="9NM-qm-N8c" firstAttribute="top" secondItem="A82-nm-IbF" secondAttribute="top" id="Rxx-SR-AsR"/>
+                            <constraint firstItem="9NM-qm-N8c" firstAttribute="centerX" secondItem="o9b-tY-cqz" secondAttribute="centerX" id="Xgb-Pr-s79"/>
                             <constraint firstItem="gq2-nG-aah" firstAttribute="trailing" secondItem="QKj-ne-CSt" secondAttribute="trailing" id="aNR-xJ-sK4"/>
                             <constraint firstItem="QKj-ne-CSt" firstAttribute="leading" secondItem="A82-nm-IbF" secondAttribute="leadingMargin" constant="69" id="d74-dA-Fyd"/>
-                            <constraint firstItem="USU-8S-ZXw" firstAttribute="bottom" secondItem="fb5-Je-vL5" secondAttribute="top" id="hFJ-G8-ang"/>
                             <constraint firstItem="o9b-tY-cqz" firstAttribute="top" secondItem="n2A-3m-ykT" secondAttribute="bottom" constant="80" id="pHH-rJ-RKL"/>
                             <constraint firstItem="QKj-ne-CSt" firstAttribute="top" secondItem="81W-HQ-Re6" secondAttribute="bottom" constant="13" id="tl7-Iz-pui"/>
                         </constraints>
@@ -277,7 +277,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="1500" height="2668"/>
         <image name="backgroundwithlogo" width="750" height="1334"/>
-        <image name="discover-image" width="750" height="1334"/>
     </resources>
 </document>

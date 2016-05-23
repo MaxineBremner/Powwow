@@ -2,28 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "discover-page.png",
+      "filename" : "discovery.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon-long-screen.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],
