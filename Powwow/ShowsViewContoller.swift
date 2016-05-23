@@ -50,10 +50,10 @@ extension ShowsViewContoller: UITableViewDataSource {
         let show = shows[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
-
-        let cellTitleLabel = cell?.viewWithTag(1) as! UILabel
-        cellTitleLabel.text = show.title + " \(show.id)"
+        let cellImage = cell?.viewWithTag(2) as! UIImageView
+        cellImage.image = show.image
         
+
         return cell!
     }
     

@@ -112,7 +112,11 @@ class ChatViewController: UIViewController {
         }
     }
     
-    func keyboardWillShow(notification: NSNotification) {
+    //additional keyboard now
+    
+    
+    
+   func keyboardWillShow(notification: NSNotification) {
         
         if keyboardDismissTapGesture == nil {
             keyboardDismissTapGesture = UITapGestureRecognizer(target: self, action: Selector("dismissKeyboard:"))
@@ -147,6 +151,8 @@ class ChatViewController: UIViewController {
     }
 }
 
+    
+    
 
 extension ChatViewController: UITableViewDataSource {
     
