@@ -28,17 +28,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="backgroundwithlogo" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-2r-BMf">
-                                                    <rect key="frame" x="256" y="7" width="88" height="63"/>
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundwithlogo" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-2r-BMf">
+                                                    <rect key="frame" x="256" y="21" width="88" height="72"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="88" id="yYx-T2-cop"/>
+                                                        <constraint firstAttribute="width" constant="88" id="PwG-sN-IK0"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="top" secondItem="ya8-ZR-tsi" secondAttribute="topMargin" constant="-1" id="AWK-5H-zd6"/>
-                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerX" secondItem="ya8-ZR-tsi" secondAttribute="centerX" id="GaY-t5-tkG"/>
-                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerY" secondItem="ya8-ZR-tsi" secondAttribute="centerY" id="I2X-xd-d2Y"/>
+                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerX" secondItem="ya8-ZR-tsi" secondAttribute="centerX" id="0my-np-cNM"/>
+                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="top" secondItem="ya8-ZR-tsi" secondAttribute="topMargin" constant="13" id="Xgr-iZ-CPk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mLh-2r-BMf" secondAttribute="bottom" constant="5" id="XlS-3x-K8h"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -80,7 +80,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's on your mind?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-oD-jGh">
-                                <rect key="frame" x="20" y="550" width="484" height="30"/>
+                                <rect key="frame" x="20" y="550" width="521" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="light" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
@@ -132,9 +132,9 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJf-7O-sgz">
-                                <rect key="frame" x="512" y="550" width="31" height="30"/>
+                                <rect key="frame" x="549" y="550" width="31" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="31" id="egY-bu-rQA"/>
+                                    <constraint firstAttribute="width" constant="31" id="tfL-kO-p3b"/>
                                 </constraints>
                                 <state key="normal" title="Post">
                                     <color key="titleColor" red="0.12941176470588237" green="0.69411764705882351" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
@@ -147,15 +147,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ht1-On-41V" firstAttribute="top" secondItem="lIs-qE-yTT" secondAttribute="top" id="07p-md-qTw"/>
-                            <constraint firstItem="xJf-7O-sgz" firstAttribute="trailing" secondItem="lIs-qE-yTT" secondAttribute="trailingMargin" constant="-37" id="0ix-PP-S5m"/>
-                            <constraint firstItem="ELW-oD-jGh" firstAttribute="top" secondItem="Ht1-On-41V" secondAttribute="bottom" constant="8" symbolic="YES" id="BME-X8-4HP"/>
-                            <constraint firstItem="ELW-oD-jGh" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leadingMargin" id="CRQ-LO-zaQ"/>
-                            <constraint firstItem="xJf-7O-sgz" firstAttribute="leading" secondItem="ELW-oD-jGh" secondAttribute="trailing" constant="8" symbolic="YES" id="DT7-FF-hnJ"/>
-                            <constraint firstAttribute="bottom" secondItem="ELW-oD-jGh" secondAttribute="bottom" constant="20" symbolic="YES" id="K9u-H8-4q8"/>
-                            <constraint firstItem="Ht1-On-41V" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leading" id="RVu-iO-oUq"/>
-                            <constraint firstItem="xJf-7O-sgz" firstAttribute="top" secondItem="Ht1-On-41V" secondAttribute="bottom" constant="8" id="T1a-Xu-lkO"/>
-                            <constraint firstAttribute="trailing" secondItem="Ht1-On-41V" secondAttribute="trailing" id="WZX-db-Sq4"/>
+                            <constraint firstItem="xJf-7O-sgz" firstAttribute="leading" secondItem="ELW-oD-jGh" secondAttribute="trailing" constant="8" symbolic="YES" id="5Yl-JH-arg"/>
+                            <constraint firstItem="Ht1-On-41V" firstAttribute="top" secondItem="lIs-qE-yTT" secondAttribute="top" id="fah-pM-vJy"/>
+                            <constraint firstAttribute="trailing" secondItem="Ht1-On-41V" secondAttribute="trailing" id="gGd-Rp-yLX"/>
+                            <constraint firstItem="xJf-7O-sgz" firstAttribute="top" secondItem="ELW-oD-jGh" secondAttribute="top" id="h2N-rK-n3O"/>
+                            <constraint firstAttribute="bottom" secondItem="ELW-oD-jGh" secondAttribute="bottom" constant="20" symbolic="YES" id="hFS-9s-w1t"/>
+                            <constraint firstItem="Ht1-On-41V" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leading" id="hig-ku-889"/>
+                            <constraint firstItem="ELW-oD-jGh" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leadingMargin" id="iOQ-dX-Ntq"/>
+                            <constraint firstItem="ELW-oD-jGh" firstAttribute="top" secondItem="Ht1-On-41V" secondAttribute="bottom" constant="8" symbolic="YES" id="lae-k6-rOK"/>
+                            <constraint firstItem="xJf-7O-sgz" firstAttribute="trailing" secondItem="lIs-qE-yTT" secondAttribute="trailingMargin" id="rrS-0O-LqD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Chats" id="UFj-lL-c0O">
@@ -166,7 +166,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bottomConstraint" destination="K9u-H8-4q8" id="G74-Gh-Pfb"/>
                         <outlet property="sendButton" destination="xJf-7O-sgz" id="Y00-Lx-9aQ"/>
                         <outlet property="tableView" destination="Ht1-On-41V" id="yBh-W1-s0H"/>
                         <outlet property="textField" destination="ELW-oD-jGh" id="EQ9-AV-zRI"/>
