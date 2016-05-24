@@ -53,7 +53,7 @@ class MessageCell: UITableViewCell  {
         } else {
             distanceLabel.text = "Location unknown"
         }
-        
+
         animateIn()
     }
     

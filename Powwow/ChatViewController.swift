@@ -65,12 +65,17 @@ class ChatViewController: UIViewController {
             if let data = data {
                 let json = JSON(data: data)
                 self.messages.removeAll()
+                
+  //make it so any new message that is past 1 hour will be filtered
                 for message in json["Messages"].arrayValue {
                     let newMessage = Message(data: message)
-                    self.filterMessages(newMessage)
+                    if newMessage.sentTime < 01:00:00 {
+                        self.filterMessages(newMessage)
+                    }
                 }
+
                 self.tableView.reloadData()
-                
+
                 //check to see if tableview is at the bottom
                 
                 if self.messages.count > 0 {

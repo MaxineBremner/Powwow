@@ -19,6 +19,7 @@ class Message {
     let showId: Int!
     let user: String!
     var location: CLLocation?
+    let sentTime: NSDate!
     
     init(data: JSON) {
         
@@ -26,6 +27,10 @@ class Message {
         id = data["Id"].intValue
         showId = data["ProgramId"].intValue
         user = data["User"].stringValue
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        sentTime = dateFormatter.dateFromString(data["SentTime"].stringValue)!
         
         if data["Lat"].doubleValue != 0.0 {
             location = CLLocation(latitude: data["Lat"].doubleValue, longitude: data["Lng"].doubleValue)
