@@ -32,7 +32,16 @@ class MessageCell: UITableViewCell  {
             messageLabel.textColor = UIColor(red: (14/255.0), green: (151/255.0), blue: (160/255.0), alpha: 1.0)
         }
         
-      
+//This is to make a break once the number of characters exceeds a certain number in the messageLabel
+        func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+            guard let text = textField.text else { return true }
+            
+            let newLength = text.utf16.count + string.utf16.count - range.length
+            return newLength <= 7
+        }
+        
+        func textField(textField: UITextField, should
+        
         
         distanceLabel.font = distanceLabel.font.fontWithSize(9)
         
