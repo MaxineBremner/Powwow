@@ -3,7 +3,7 @@
 //  Powwow
 //
 //  Created by apple on 19/04/2016.
-//  Copyright © 2016 Kyle Goslan. All rights reserved.
+//  Copyright © 2016 Maxine Bremner. All rights reserved.
 //
 
 import UIKit
@@ -27,7 +27,6 @@ class MessageCell: UITableViewCell  {
         self.backgroundColor = .clearColor()
         
         messageLabel.center.x = self.center.x - 40
-
         
         messageLabel.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
         messageLabel.text = message.message
@@ -39,13 +38,11 @@ class MessageCell: UITableViewCell  {
             messageLabel.textAlignment = .Right
             distanceLabel.textAlignment = .Right
                   } else {
-            messageLabel.layer.backgroundColor = UIColor(red: (255/255), green: (255/255), blue:(255/255), alpha: 1.0).CGColor
-            messageLabel.textColor = UIColor(red: (30/255.0), green: (189/255.0), blue: (200/255.0), alpha: 1.0)
+            messageLabel.layer.backgroundColor = UIColor(red: (231/255.0), green: (231/255.0), blue: (231/255.0), alpha: 1.0).CGColor
+            messageLabel.textColor = UIColor(red: (0/255.0), green: (0/255.0), blue: (0/255.0), alpha: 1.0)
             messageLabel.textAlignment = .Left
-            messageLabel.textColor = UIColor(red: (14/255.0), green: (151/255.0), blue: (160/255.0), alpha: 1.0)
             
         }
-        
         
 
         

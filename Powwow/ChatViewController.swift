@@ -74,7 +74,7 @@ class ChatViewController: UIViewController {
                 //check to see if tableview is at the bottom
                 
                 if self.messages.count > 0 {
-                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom,  animated: true)
+                    self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
                 }
             }
         }

@@ -79,9 +79,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat-room-background" translatesAutoresizingMaskIntoConstraints="NO" id="fS3-g7-3bM">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What's on your mind?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ELW-oD-jGh">
                                 <rect key="frame" x="20" y="550" width="521" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -151,17 +148,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fS3-g7-3bM" firstAttribute="bottom" secondItem="h2d-8M-5XH" secondAttribute="top" id="54D-m6-Hsl"/>
                             <constraint firstItem="xJf-7O-sgz" firstAttribute="leading" secondItem="ELW-oD-jGh" secondAttribute="trailing" constant="8" symbolic="YES" id="5Yl-JH-arg"/>
                             <constraint firstItem="ELW-oD-jGh" firstAttribute="top" secondItem="Ht1-On-41V" secondAttribute="bottom" constant="8" symbolic="YES" id="Eg9-Mk-16Y"/>
-                            <constraint firstItem="Ht1-On-41V" firstAttribute="leading" secondItem="fS3-g7-3bM" secondAttribute="leading" id="L5P-pM-S7u"/>
                             <constraint firstItem="Ht1-On-41V" firstAttribute="top" secondItem="hh6-0N-EVh" secondAttribute="bottom" id="YEv-u7-SlO"/>
                             <constraint firstItem="Ht1-On-41V" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leading" id="cJy-Ea-YXI"/>
-                            <constraint firstItem="Ht1-On-41V" firstAttribute="trailing" secondItem="fS3-g7-3bM" secondAttribute="trailing" id="fuq-HZ-0eN"/>
                             <constraint firstItem="xJf-7O-sgz" firstAttribute="top" secondItem="ELW-oD-jGh" secondAttribute="top" id="h2N-rK-n3O"/>
                             <constraint firstAttribute="bottom" secondItem="ELW-oD-jGh" secondAttribute="bottom" constant="20" symbolic="YES" id="hFS-9s-w1t"/>
                             <constraint firstItem="ELW-oD-jGh" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leadingMargin" id="iOQ-dX-Ntq"/>
-                            <constraint firstItem="fS3-g7-3bM" firstAttribute="top" secondItem="lIs-qE-yTT" secondAttribute="top" id="qjc-uO-Mnf"/>
                             <constraint firstItem="xJf-7O-sgz" firstAttribute="trailing" secondItem="lIs-qE-yTT" secondAttribute="trailingMargin" id="rrS-0O-LqD"/>
                             <constraint firstAttribute="trailing" secondItem="Ht1-On-41V" secondAttribute="trailing" id="zzM-qv-djz"/>
                         </constraints>
@@ -287,6 +280,5 @@
     <resources>
         <image name="Image" width="1500" height="2668"/>
         <image name="backgroundwithlogo" width="750" height="1334"/>
-        <image name="chat-room-background" width="750" height="1334"/>
     </resources>
 </document>

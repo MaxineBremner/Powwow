@@ -4,7 +4,7 @@
 //  Powwow
 //
 //  Created by apple on 17/05/2016.
-//  Copyright © 2016 Kyle Goslan. All rights reserved.
+//  Copyright © 2016 Maxine Bremner. All rights reserved.
 //
 
 import UIKit
