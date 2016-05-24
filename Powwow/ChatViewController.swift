@@ -119,7 +119,10 @@ class ChatViewController: UIViewController {
     //additional keyboard now
     
 
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        print("layout subviews")
+    }
     
    func keyboardWillShow(notification: NSNotification) {
     

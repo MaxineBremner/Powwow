@@ -26,10 +26,14 @@ class MessageCell: UITableViewCell  {
         self.selectionStyle = .None
         self.backgroundColor = .clearColor()
         
+        messageLabel.center.x = self.center.x - 40
+
+        
         messageLabel.textContainerInset = UIEdgeInsetsMake(10, 10, 10, 10)
         messageLabel.text = message.message
         messageLabel.alpha = 1
         if message.isUser(user){
+            messageLabel.center.x = self.center.x + 40
             messageLabel.layer.backgroundColor = UIColor(red: (30/255.0), green: (189/255.0), blue: (200/255.0), alpha: 1.0).CGColor
             messageLabel.textColor = UIColor(red: (255/255), green: (255/255), blue:(255/255), alpha: 1.0)
             messageLabel.textAlignment = .Right
@@ -39,8 +43,12 @@ class MessageCell: UITableViewCell  {
             messageLabel.textColor = UIColor(red: (30/255.0), green: (189/255.0), blue: (200/255.0), alpha: 1.0)
             messageLabel.textAlignment = .Left
             messageLabel.textColor = UIColor(red: (14/255.0), green: (151/255.0), blue: (160/255.0), alpha: 1.0)
+            
         }
+        
+        
 
+        
         distanceLabel.font = distanceLabel.font.fontWithSize(9)
         
         if let currentLocation = currentLocation, messageLocation = message.location {
