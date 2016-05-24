@@ -32,8 +32,10 @@ class ChatViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
         
-        textField.becomeFirstResponder() //this makes the keyboard appear straight away
+        tableView.backgroundColor = .clearColor()
         
+        textField.becomeFirstResponder() //this makes the keyboard appear straight away
+    
     }
 
     
@@ -57,6 +59,7 @@ class ChatViewController: UIViewController {
         timer!.invalidate()
     }
 
+
     func updateChat() {
         Alamofire.request(.POST, "http://178.62.89.129/messages.php", parameters: ["program_id": "\(show.id)"]).response { request, response, data, error in
             if let data = data {
@@ -67,6 +70,9 @@ class ChatViewController: UIViewController {
                     self.filterMessages(newMessage)
                 }
                 self.tableView.reloadData()
+                
+                //check to see if tableview is at the bottom
+                
                 if self.messages.count > 0 {
                     self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom,  animated: true)
                 }
@@ -78,8 +84,6 @@ class ChatViewController: UIViewController {
     func filterMessages(message: Message) {
         
         guard let location = message.location else { return }
-        
-        print(locationDistance)
         
         if let currentLocation = currentLocation {
             if Int(location.distanceFromLocation(currentLocation) / 1000) < locationDistance! {
@@ -125,7 +129,6 @@ class ChatViewController: UIViewController {
             self.view.addGestureRecognizer(keyboardDismissTapGesture!)
             let info = notification.userInfo!
             let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-            print(keyboardFrame)
             UIView.animateWithDuration(0.5, animations: {
             self.bottomConstraint.constant = keyboardFrame.size.height + 5
             })
@@ -142,7 +145,6 @@ class ChatViewController: UIViewController {
             keyboardDismissTapGesture = nil
             let info = notification.userInfo!
             let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-            print(keyboardFrame)
             UIView.animateWithDuration(0.5, animations: {
             self.bottomConstraint.constant = keyboardFrame.size.height - 5
             
@@ -176,6 +178,16 @@ extension ChatViewController: UITableViewDataSource {
 }
 
 extension ChatViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        //let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MessageCell
+        return 100
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MessageCell
+        cell.selectedState()
+    }
 
 }
 

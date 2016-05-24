@@ -33,9 +33,11 @@ class Message {
     }
     
     func isUser(user: String) -> Bool {
-        print(user)
-        print(self.user)
         return user == self.user
     }
     
 }
+
+
+
+
