@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundwithlogo" highlightedImage="Channel 4" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-2r-BMf">
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-2r-BMf">
                                                     <rect key="frame" x="256" y="11" width="88" height="83"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="88" id="NNy-eB-imm"/>
@@ -282,8 +282,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Channel 4" width="964" height="1248"/>
         <image name="Image" width="1500" height="2668"/>
-        <image name="backgroundwithlogo" width="750" height="1334"/>
     </resources>
 </document>
