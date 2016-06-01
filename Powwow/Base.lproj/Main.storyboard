@@ -170,6 +170,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bottomConstraint" destination="hFS-9s-w1t" id="tDu-QW-0oH"/>
                         <outlet property="sendButton" destination="xJf-7O-sgz" id="Y00-Lx-9aQ"/>
                         <outlet property="tableView" destination="Ht1-On-41V" id="yBh-W1-s0H"/>
                         <outlet property="textField" destination="ELW-oD-jGh" id="EQ9-AV-zRI"/>
