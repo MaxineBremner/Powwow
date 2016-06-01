@@ -36,7 +36,7 @@ class ChatViewController: UIViewController {
         
         textField.becomeFirstResponder() //this makes the keyboard appear straight away
     
-    }
+    } 
 
     
     override func viewDidAppear(animated: Bool) {
@@ -67,12 +67,13 @@ class ChatViewController: UIViewController {
                 self.messages.removeAll()
                 
                 for message in json["Messages"].arrayValue {
+               
                     let newMessage = Message(data: message)
                     self.filterMessages(newMessage)
                 }
                 
                 self.tableView.reloadData()
-
+                print(self.messages.count)
                 if self.messages.count > 0 {
                     self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
                 }

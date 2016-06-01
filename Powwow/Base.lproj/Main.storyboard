@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundwithlogo" highlightedImage="backgroundwithlogo" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-2r-BMf">
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundwithlogo" highlightedImage="Channel 4" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-2r-BMf">
                                                     <rect key="frame" x="256" y="11" width="88" height="83"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="88" id="NNy-eB-imm"/>
@@ -87,22 +87,6 @@
                                     <outlet property="delegate" destination="2bX-ir-bm1" id="Ig0-p4-Nca"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJf-7O-sgz">
-                                <rect key="frame" x="549" y="550" width="43" height="30"/>
-                                <color key="backgroundColor" red="0.12941176470588237" green="0.69411764705882351" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Nhn-Cd-iLU"/>
-                                    <constraint firstAttribute="width" constant="43" id="bq8-Vv-eGk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Post">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.050980396568775177" green="0.0078431377187371254" blue="0.0078431377187371254" alpha="1" colorSpace="deviceRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendMessage:" destination="2bX-ir-bm1" eventType="touchUpInside" id="k1l-NJ-tsh"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-On-41V">
                                 <rect key="frame" x="0.0" y="64" width="600" height="478"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -148,17 +132,33 @@
                                     <outlet property="delegate" destination="2bX-ir-bm1" id="3kf-X3-JeH"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJf-7O-sgz">
+                                <rect key="frame" x="549" y="550" width="43" height="30"/>
+                                <color key="backgroundColor" red="0.12941176470588237" green="0.69411764705882351" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SIK-L7-vgu"/>
+                                    <constraint firstAttribute="width" constant="43" id="Uxm-AS-Mx5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.050980396568775177" green="0.0078431377187371254" blue="0.0078431377187371254" alpha="1" colorSpace="deviceRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="2bX-ir-bm1" eventType="touchUpInside" id="k1l-NJ-tsh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xJf-7O-sgz" firstAttribute="leading" secondItem="ELW-oD-jGh" secondAttribute="trailing" constant="8" symbolic="YES" id="DJD-dD-lnM"/>
                             <constraint firstItem="ELW-oD-jGh" firstAttribute="top" secondItem="Ht1-On-41V" secondAttribute="bottom" constant="8" symbolic="YES" id="Eg9-Mk-16Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xJf-7O-sgz" secondAttribute="trailing" constant="-12" id="KEJ-sZ-3qJ"/>
-                            <constraint firstItem="xJf-7O-sgz" firstAttribute="leading" secondItem="ELW-oD-jGh" secondAttribute="trailing" constant="8" symbolic="YES" id="TMf-zl-18O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xJf-7O-sgz" secondAttribute="trailing" constant="-12" id="Qeu-JO-b0h"/>
                             <constraint firstItem="Ht1-On-41V" firstAttribute="top" secondItem="hh6-0N-EVh" secondAttribute="bottom" id="YEv-u7-SlO"/>
                             <constraint firstItem="Ht1-On-41V" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leading" id="cJy-Ea-YXI"/>
                             <constraint firstAttribute="bottom" secondItem="ELW-oD-jGh" secondAttribute="bottom" constant="20" symbolic="YES" id="hFS-9s-w1t"/>
                             <constraint firstItem="ELW-oD-jGh" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leadingMargin" id="iOQ-dX-Ntq"/>
-                            <constraint firstItem="xJf-7O-sgz" firstAttribute="top" secondItem="ELW-oD-jGh" secondAttribute="top" id="zNE-lb-aPL"/>
+                            <constraint firstItem="xJf-7O-sgz" firstAttribute="top" secondItem="ELW-oD-jGh" secondAttribute="top" id="ziF-DI-Fga"/>
                             <constraint firstAttribute="trailing" secondItem="Ht1-On-41V" secondAttribute="trailing" id="zzM-qv-djz"/>
                         </constraints>
                     </view>
@@ -282,6 +282,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Channel 4" width="964" height="1248"/>
         <image name="Image" width="1500" height="2668"/>
         <image name="backgroundwithlogo" width="750" height="1334"/>
     </resources>
