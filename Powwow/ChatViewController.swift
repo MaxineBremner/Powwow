@@ -65,9 +65,10 @@ class ChatViewController: UIViewController {
             if let data = data {
                 let json = JSON(data: data)
                 self.messages.removeAll()
+                print(json)
                 
                 for message in json["Messages"].arrayValue {
-               
+            
                     let newMessage = Message(data: message)
                     self.filterMessages(newMessage)
                 }
