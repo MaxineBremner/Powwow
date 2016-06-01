@@ -28,17 +28,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="106"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundwithlogo" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-2r-BMf">
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundwithlogo" highlightedImage="backgroundwithlogo" translatesAutoresizingMaskIntoConstraints="NO" id="mLh-2r-BMf">
                                                     <rect key="frame" x="256" y="11" width="88" height="83"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="88" id="vpQ-BK-GZQ"/>
+                                                        <constraint firstAttribute="width" constant="88" id="NNy-eB-imm"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerY" secondItem="ya8-ZR-tsi" secondAttribute="centerY" id="3Tq-rP-RRw"/>
-                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="top" secondItem="ya8-ZR-tsi" secondAttribute="topMargin" constant="3" id="POa-ga-ukv"/>
-                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerX" secondItem="ya8-ZR-tsi" secondAttribute="centerX" id="hCj-x8-n6s"/>
+                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerX" secondItem="ya8-ZR-tsi" secondAttribute="centerX" id="9nG-vb-Oza"/>
+                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="centerY" secondItem="ya8-ZR-tsi" secondAttribute="centerY" id="QTV-Wp-WTY"/>
+                                                <constraint firstItem="mLh-2r-BMf" firstAttribute="top" secondItem="ya8-ZR-tsi" secondAttribute="topMargin" constant="3" id="a0e-Hv-wop"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -88,12 +88,15 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJf-7O-sgz">
-                                <rect key="frame" x="549" y="550" width="31" height="30"/>
+                                <rect key="frame" x="549" y="550" width="43" height="30"/>
+                                <color key="backgroundColor" red="0.12941176470588237" green="0.69411764705882351" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="31" id="tfL-kO-p3b"/>
+                                    <constraint firstAttribute="height" constant="30" id="Nhn-Cd-iLU"/>
+                                    <constraint firstAttribute="width" constant="43" id="bq8-Vv-eGk"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Post">
-                                    <color key="titleColor" red="0.12941176470588237" green="0.69411764705882351" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.050980396568775177" green="0.0078431377187371254" blue="0.0078431377187371254" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -148,14 +151,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xJf-7O-sgz" firstAttribute="leading" secondItem="ELW-oD-jGh" secondAttribute="trailing" constant="8" symbolic="YES" id="5Yl-JH-arg"/>
                             <constraint firstItem="ELW-oD-jGh" firstAttribute="top" secondItem="Ht1-On-41V" secondAttribute="bottom" constant="8" symbolic="YES" id="Eg9-Mk-16Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xJf-7O-sgz" secondAttribute="trailing" constant="-12" id="KEJ-sZ-3qJ"/>
+                            <constraint firstItem="xJf-7O-sgz" firstAttribute="leading" secondItem="ELW-oD-jGh" secondAttribute="trailing" constant="8" symbolic="YES" id="TMf-zl-18O"/>
                             <constraint firstItem="Ht1-On-41V" firstAttribute="top" secondItem="hh6-0N-EVh" secondAttribute="bottom" id="YEv-u7-SlO"/>
                             <constraint firstItem="Ht1-On-41V" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leading" id="cJy-Ea-YXI"/>
-                            <constraint firstItem="xJf-7O-sgz" firstAttribute="top" secondItem="ELW-oD-jGh" secondAttribute="top" id="h2N-rK-n3O"/>
                             <constraint firstAttribute="bottom" secondItem="ELW-oD-jGh" secondAttribute="bottom" constant="20" symbolic="YES" id="hFS-9s-w1t"/>
                             <constraint firstItem="ELW-oD-jGh" firstAttribute="leading" secondItem="lIs-qE-yTT" secondAttribute="leadingMargin" id="iOQ-dX-Ntq"/>
-                            <constraint firstItem="xJf-7O-sgz" firstAttribute="trailing" secondItem="lIs-qE-yTT" secondAttribute="trailingMargin" id="rrS-0O-LqD"/>
+                            <constraint firstItem="xJf-7O-sgz" firstAttribute="top" secondItem="ELW-oD-jGh" secondAttribute="top" id="zNE-lb-aPL"/>
                             <constraint firstAttribute="trailing" secondItem="Ht1-On-41V" secondAttribute="trailing" id="zzM-qv-djz"/>
                         </constraints>
                     </view>

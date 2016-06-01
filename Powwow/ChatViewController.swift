@@ -50,7 +50,7 @@ class ChatViewController: UIViewController {
         
         updateChat()
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "updateChat", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateChat", userInfo: nil, repeats: true)
     }
     
     
@@ -116,8 +116,7 @@ class ChatViewController: UIViewController {
         }
     }
     
-    //additional keyboard now
-    
+   
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
