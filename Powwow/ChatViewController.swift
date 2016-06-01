@@ -60,24 +60,19 @@ class ChatViewController: UIViewController {
     }
 
 
-    func updateChat() {
+      func updateChat() {
         Alamofire.request(.POST, "http://178.62.89.129/messages.php", parameters: ["program_id": "\(show.id)"]).response { request, response, data, error in
             if let data = data {
                 let json = JSON(data: data)
                 self.messages.removeAll()
                 
-  //make it so any new message that is past 1 hour will be filtered
                 for message in json["Messages"].arrayValue {
                     let newMessage = Message(data: message)
-                    if newMessage.sentTime < 01:00:00 {
-                        self.filterMessages(newMessage)
-                    }
+                    self.filterMessages(newMessage)
                 }
-
+                
                 self.tableView.reloadData()
 
-                //check to see if tableview is at the bottom
-                
                 if self.messages.count > 0 {
                     self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: self.messages.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
                 }
@@ -126,7 +121,7 @@ class ChatViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print("layout subviews")
+
     }
     
    func keyboardWillShow(notification: NSNotification) {
